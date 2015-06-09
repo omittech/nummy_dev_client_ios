@@ -147,64 +147,7 @@
                                             <outlet property="chefName" destination="bs0-K5-Qcp" id="auE-U5-e0q"/>
                                             <outlet property="chefPic" destination="Sl5-Da-5PH" id="xRb-k3-WMH"/>
                                             <outlet property="numOfLike" destination="Aoj-4t-5mb" id="XfI-JY-I5B"/>
-                                            <segue destination="tnx-He-eZi" kind="show" id="M4n-ua-bFv"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="emptyCell" id="cCa-YE-xby">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="303" height="73"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="nextPageCell" id="EhR-3Q-1gJ" customClass="chelListNextPageCell" customModule="nummy_dev_client_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="303" height="55"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhF-HL-X1b">
-                                                    <rect key="frame" x="8" y="12" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="3A9-w3-JcS"/>
-                                                        <constraint firstAttribute="height" constant="32" id="aeK-A5-JYL"/>
-                                                    </constraints>
-                                                    <state key="normal" image="lastScrollPage.png">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="lastPage:" destination="fa3-zq-ROP" eventType="touchUpInside" id="oEP-fP-93F"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMG-0q-rJQ">
-                                                    <rect key="frame" x="263" y="12" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="W6a-h1-4hK"/>
-                                                        <constraint firstAttribute="height" constant="32" id="nxP-3f-d1O"/>
-                                                    </constraints>
-                                                    <state key="normal" image="nextScrollPage.png">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="nextPage:" destination="fa3-zq-ROP" eventType="touchUpInside" id="tc7-Cj-1Uy"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="cMG-0q-rJQ" firstAttribute="trailing" secondItem="EhR-3Q-1gJ" secondAttribute="trailingMargin" id="0yT-a2-Vhl"/>
-                                            <constraint firstAttribute="centerY" secondItem="cMG-0q-rJQ" secondAttribute="centerY" constant="-0.5" id="Bzb-3j-8d5"/>
-                                            <constraint firstItem="hhF-HL-X1b" firstAttribute="leading" secondItem="EhR-3Q-1gJ" secondAttribute="leadingMargin" id="TwT-qh-KLF"/>
-                                            <constraint firstAttribute="centerY" secondItem="hhF-HL-X1b" secondAttribute="centerY" constant="-0.5" id="ejg-HN-l6U"/>
-                                        </constraints>
-                                        <size key="customSize" width="303" height="55"/>
-                                        <connections>
-                                            <outlet property="lastPageButton" destination="hhF-HL-X1b" id="dqT-o9-n4H"/>
-                                            <outlet property="nextPageButton" destination="cMG-0q-rJQ" id="YyP-bw-Thq"/>
+                                            <segue destination="tnx-He-eZi" kind="show" identifier="showChefDetail" id="M4n-ua-bFv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -233,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqd-sl-O3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483.5" y="78.5"/>
+            <point key="canvasLocation" x="364.5" y="78.5"/>
         </scene>
         <!--Chef Detail View Controller-->
         <scene sceneID="g8E-uo-ZrK">
@@ -669,15 +612,13 @@
         <image name="foodBackground.png" width="1410" height="768"/>
         <image name="heart.png" width="46" height="41"/>
         <image name="ingrdient.png" width="190" height="40"/>
-        <image name="lastScrollPage.png" width="66" height="66"/>
         <image name="location_filled_orange_52px.png" width="52" height="52"/>
         <image name="menu_orange_52px.png" width="52" height="52"/>
-        <image name="nextScrollPage.png" width="66" height="66"/>
         <image name="plus.png" width="47" height="47"/>
         <image name="separator.png" width="242" height="7"/>
         <image name="whiteBackground.png" width="266" height="276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wvy-iH-QT2"/>
+        <segue reference="M4n-ua-bFv"/>
     </inferredMetricsTieBreakers>
 </document>

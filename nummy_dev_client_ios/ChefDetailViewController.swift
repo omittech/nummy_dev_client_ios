@@ -9,10 +9,12 @@
 import UIKit
 
 class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    var chefVO: ChefVO!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        println(chefVO.name)
     }
     
     override func didReceiveMemoryWarning() {
