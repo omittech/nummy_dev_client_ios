@@ -26,7 +26,7 @@ struct ChefVO  {
     var images: Dictionary<String, UIImage> = Dictionary<String, UIImage>()
     //    var location: [Double] = [Double]()
     
-    init(dictionary : NSDictionary, baseUrl : String) {
+    init(dictionary : NSDictionary) {
         self.id = dictionary.valueForKey("_id") as! NSString
         self.name = dictionary.valueForKey("name") as! NSString
         self.country = dictionary.valueForKey("country") as! NSString
@@ -44,9 +44,9 @@ struct ChefVO  {
         var imagePaths = dictionary.valueForKey("images") as! [String]
         
         // get the images for chef
-        let url1 = NSURL(string: (baseUrl as String) + "api/images/" + imagePaths[0])
+        let url1 = NSURL(string: (baseUrl as String) + "/api/images/" + imagePaths[0])
         let data1 = NSData(contentsOfURL: url1!)
-        let url2 = NSURL(string: (baseUrl as String) + "api/images/" + imagePaths[1])
+        let url2 = NSURL(string: (baseUrl as String) + "/api/images/" + imagePaths[1])
         let data2 = NSData(contentsOfURL: url2!)
         if NSString(string: imagePaths[0]).containsString("chef") {
             images["chef"] = UIImage(data: data1!)

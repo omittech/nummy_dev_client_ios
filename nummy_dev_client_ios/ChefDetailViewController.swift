@@ -10,24 +10,58 @@ import UIKit
 
 class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var chefVO: ChefVO!
+    var itemsList: [ItemVO] = [ItemVO]()
+    var numOfCell = 0
+    
+    @IBOutlet weak var chefPicture: UIImageView!
+    @IBOutlet weak var chefName: UILabel!
+    @IBOutlet weak var chefAddress: UILabel!
+    @IBOutlet weak var chefDistance: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        println(chefVO.name)
+
+        chefPicture.image = chefVO.images["chef"]
+        chefName.text = chefVO.name as String
+        chefAddress.text = chefVO.address as String
+        chefDistance.text = chefVO.distance.stringValue + " km"
+        
+        getItems()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func getItems() {
+        var apiEndpoint = baseUrl + "/api/item/restaurant/" + (chefVO.id as String)
+        var urlRequest = NSMutableURLRequest(URL: NSURL(string: apiEndpoint)!)
+        
+        var getChefError: NSError?
+        var responseData: NSData!
+        responseData = NSURLConnection.sendSynchronousRequest(urlRequest, returningResponse: nil, error: &getChefError)
+        var parseError: NSError?
+        let parsedData = NSJSONSerialization.JSONObjectWithData(responseData, options: nil, error: &parseError) as! NSDictionary
+        
+        var items = parsedData.valueForKey("data") as! NSArray
+        for item in items {
+            var itemVO = ItemVO(dictionary: item as! NSDictionary)
+            itemsList.append(itemVO)
+        }
+        numOfCell = itemsList.count
+    }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return numOfCell
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("chefItemCell", forIndexPath: indexPath) as! UICollectionViewCell
+        var cell: foodItemCell = collectionView.dequeueReusableCellWithReuseIdentifier("chefItemCell", forIndexPath: indexPath) as! foodItemCell
+        var item = itemsList[indexPath.row]
+        cell.itemName.text = item.name
+        cell.itemPrice.text = "$"+item.price.stringValue
+        cell.itemImage.image = item.image
         return cell
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE171B27DAB700347045 /* ItemVO.swift */; };
 		5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4FBF911B268B06001340D3 /* ChefListViewController.swift */; };
 		5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1401E1B2681A7002341A6 /* ChefVO.swift */; };
 		5ED2056D1AE5CE9400CF2426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2056C1AE5CE9400CF2426 /* AppDelegate.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E38EE171B27DAB700347045 /* ItemVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemVO.swift; path = VO/ItemVO.swift; sourceTree = "<group>"; };
 		5E4FBF911B268B06001340D3 /* ChefListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListViewController.swift; sourceTree = "<group>"; };
 		5EC1401E1B2681A7002341A6 /* ChefVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChefVO.swift; path = VO/ChefVO.swift; sourceTree = "<group>"; };
 		5ED205671AE5CE9400CF2426 /* nummy_dev_client_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nummy_dev_client_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				5EC1401E1B2681A7002341A6 /* ChefVO.swift */,
+				5E38EE171B27DAB700347045 /* ItemVO.swift */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */,
+				5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */,
 				5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */,
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,
 				CAD2D8001B02CFB9006BA377 /* SignUpViewController.swift in Sources */,

@@ -367,6 +367,12 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="chefAddress" destination="dxz-Xi-445" id="e3s-5h-tGo"/>
+                        <outlet property="chefDistance" destination="u9A-dZ-KGR" id="dTs-bb-B7U"/>
+                        <outlet property="chefName" destination="flc-FM-Lzs" id="eo3-Z9-dmb"/>
+                        <outlet property="chefPicture" destination="92O-U5-Ui5" id="u69-h1-TuO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lte-Gf-3DT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

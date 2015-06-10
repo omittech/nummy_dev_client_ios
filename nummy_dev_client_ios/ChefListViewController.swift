@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
-
+let baseUrl = "http://frozen-island-6927.herokuapp.com"
 
 class ChefListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate{
     // record the number of cells in collection view(not including
@@ -18,7 +18,7 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
     var locationManager = CLLocationManager()
     
     // base url for api call
-    var baseUrl = "http://frozen-island-6927.herokuapp.com/"
+
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -44,7 +44,7 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func getChefs() {
-        var apiEndpoint = "http://frozen-island-6927.herokuapp.com/api/restaurant/25.044898/121.523374/10"
+        var apiEndpoint = baseUrl + "/api/restaurant/25.044898/121.523374/10"
         var urlRequest = NSMutableURLRequest(URL: NSURL(string: apiEndpoint)!)
         
         var getChefError: NSError?
@@ -55,7 +55,7 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         var chefs = parsedData.valueForKey("data") as! NSArray
         for chef in chefs {
-            var chefVO = ChefVO(dictionary: chef as! NSDictionary, baseUrl: baseUrl)
+            var chefVO = ChefVO(dictionary: chef as! NSDictionary)
             chefsList.append(chefVO)
         }
         numOfCell = chefsList.count
@@ -100,7 +100,7 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        println(indexPath.row)
+
     }
     
     // Controll the location update of user
