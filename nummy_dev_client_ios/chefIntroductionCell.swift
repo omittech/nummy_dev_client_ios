@@ -11,6 +11,5 @@ import UIKit
 class chefIntroductionCell : UICollectionViewCell{
     @IBOutlet weak var chefName: UILabel!
     @IBOutlet weak var chefAddr: UILabel!
-    @IBOutlet weak var chefTitle: UILabel!
     @IBOutlet weak var chefIntroduction: UILabel!
 }

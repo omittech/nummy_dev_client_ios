@@ -25,7 +25,7 @@
                                     <color key="textColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Chef" id="XGT-oo-bFc">
+                                    <navigationItem title="Nummy's Chef" id="XGT-oo-bFc">
                                         <barButtonItem key="leftBarButtonItem" image="menu_orange_52px.png" id="fcu-fK-JQh">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
@@ -156,6 +156,10 @@
                                     <outlet property="delegate" destination="fa3-zq-ROP" id="adj-GR-49B"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="zx8-YD-IZn">
+                                <rect key="frame" x="177" y="324" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -172,11 +176,12 @@
                     <connections>
                         <outlet property="chefList" destination="k6t-P6-kS6" id="aEg-8o-bnN"/>
                         <outlet property="collectionView" destination="k6t-P6-kS6" id="1Vn-jf-qGl"/>
+                        <outlet property="spinner" destination="zx8-YD-IZn" id="10m-en-vcS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqd-sl-O3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364.5" y="78.5"/>
+            <point key="canvasLocation" x="300.5" y="69.5"/>
         </scene>
         <!--Chef Detail View Controller-->
         <scene sceneID="g8E-uo-ZrK">
@@ -201,7 +206,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="backButton.png" id="Tip-4a-Ubz">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="fa3-zq-ROP" kind="show" id="b1F-yd-XA9"/>
+                                                <segue destination="fa3-zq-ROP" kind="show" identifier="backToChefListView" id="b1F-yd-XA9"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="cart.png" id="u6i-jZ-BVu">
@@ -339,7 +344,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="UMi-9N-7ro" kind="show" id="Xby-Wz-CQA"/>
+                                            <segue destination="UMi-9N-7ro" kind="show" identifier="showChefIntroduction" id="Xby-Wz-CQA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -348,6 +353,10 @@
                                     <constraint firstAttribute="width" secondItem="jBO-4C-c74" secondAttribute="height" multiplier="375:121" id="hsk-aG-Hrl"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Q7b-wS-fJV">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -372,11 +381,14 @@
                         <outlet property="chefDistance" destination="u9A-dZ-KGR" id="dTs-bb-B7U"/>
                         <outlet property="chefName" destination="flc-FM-Lzs" id="eo3-Z9-dmb"/>
                         <outlet property="chefPicture" destination="92O-U5-Ui5" id="u69-h1-TuO"/>
+                        <outlet property="chefTitle" destination="tu3-rB-0IL" id="FK9-5f-LaC"/>
+                        <outlet property="collectionView" destination="WuI-v7-jy0" id="Zd8-An-DOJ"/>
+                        <outlet property="spinner" destination="Q7b-wS-fJV" id="6AW-v2-Aus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lte-Gf-3DT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.5" y="78.5"/>
+            <point key="canvasLocation" x="879.5" y="69.5"/>
         </scene>
         <!--Chef Intro View Controller-->
         <scene sceneID="UBG-1H-bEh">
@@ -400,7 +412,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="backButton.png" id="8fZ-WD-sZC">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="tnx-He-eZi" kind="show" id="wvy-iH-QT2"/>
+                                                <segue destination="tnx-He-eZi" kind="show" identifier="backToChefDetail" id="wvy-iH-QT2"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="cart.png" id="JD0-sO-sbt">
@@ -419,7 +431,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chefPicCell" id="K5O-lN-ZGh">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chefPicCell" id="K5O-lN-ZGh" customClass="chefPicCell" customModule="nummy_dev_client_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -440,16 +452,19 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="xyd-jY-vN2" secondAttribute="trailing" constant="-10" id="vVR-bs-NKO"/>
                                         </constraints>
                                         <size key="customSize" width="340" height="113"/>
+                                        <connections>
+                                            <outlet property="chefBackground" destination="xyd-jY-vN2" id="cby-Qn-cOi"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chefProfileCell" id="RBr-X8-d5X" customClass="chefIntroductionCell" customModule="nummy_dev_client_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="340" height="94"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="337" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Richmond, BC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhq-qY-XIA">
-                                                    <rect key="frame" x="33" y="17" width="122" height="15"/>
+                                                    <rect key="frame" x="31" y="19" width="122" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -458,32 +473,26 @@
                                                     <rect key="frame" x="8" y="14" width="26" height="26"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chef Miranda Kerr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Y-HQ-2mz">
-                                                    <rect key="frame" x="18" y="0.0" width="228" height="21"/>
+                                                    <rect key="frame" x="8" y="0.0" width="228" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alum of Bluecat (Exec Chef)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbi-zz-37V">
-                                                    <rect key="frame" x="18" y="34" width="215" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miranda used to be a super model. Then she realized her passion was in cooking." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hl-uA-wa0">
-                                                    <rect key="frame" x="16" y="43" width="279" height="51"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hl-uA-wa0">
+                                                    <rect key="frame" x="8" y="35" width="324" height="41"/>
+                                                    <string key="text">Whether you are going to have a business lunch, romantic candlelight dinner or just a drink after a busy day, the five-star Grand Hotel Bohemia will always meet your needs</string>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <size key="customSize" width="340" height="94"/>
+                                        <size key="customSize" width="337" height="138"/>
                                         <connections>
                                             <outlet property="chefAddr" destination="Lhq-qY-XIA" id="xay-Lh-Ri8"/>
                                             <outlet property="chefIntroduction" destination="4Hl-uA-wa0" id="h3v-GP-Pr7"/>
                                             <outlet property="chefName" destination="Y5Y-HQ-2mz" id="d2M-4O-Gzc"/>
-                                            <outlet property="chefTitle" destination="Bbi-zz-37V" id="Xgf-oO-rB3"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="separatorCell" id="A4l-KP-XhO">
@@ -526,7 +535,7 @@
                                                 <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="vxP-nq-bpu">
                                                     <rect key="frame" x="0.0" y="0.0" width="341" height="113"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJg-hO-8fT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJg-hO-8fT">
                                                     <rect key="frame" x="0.0" y="0.0" width="341" height="82"/>
                                                     <color key="backgroundColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -601,10 +610,13 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="chefIntroTitile" destination="cfu-EB-za1" id="Jbb-4M-2nd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xq-Ia-9Pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264.5" y="78.5"/>
+            <point key="canvasLocation" x="1405.5" y="69.5"/>
         </scene>
     </scenes>
     <resources>
@@ -625,6 +637,6 @@
         <image name="whiteBackground.png" width="266" height="276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M4n-ua-bFv"/>
+        <segue reference="wvy-iH-QT2"/>
     </inferredMetricsTieBreakers>
 </document>

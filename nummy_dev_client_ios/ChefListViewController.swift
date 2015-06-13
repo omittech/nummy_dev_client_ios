@@ -20,12 +20,14 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
     // base url for api call
 
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var chefList: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         let chefListBackground: UIImageView = UIImageView(image: UIImage(named: "loginbg.png"))
         chefListBackground.alpha = 0.5
         chefList.backgroundView = chefListBackground
@@ -35,7 +37,13 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
+        spinner.startAnimating()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         getChefs()
+        spinner.stopAnimating()
+        collectionView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

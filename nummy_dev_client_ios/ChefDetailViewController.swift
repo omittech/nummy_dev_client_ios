@@ -13,20 +13,30 @@ class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UI
     var itemsList: [ItemVO] = [ItemVO]()
     var numOfCell = 0
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var chefPicture: UIImageView!
     @IBOutlet weak var chefName: UILabel!
     @IBOutlet weak var chefAddress: UILabel!
     @IBOutlet weak var chefDistance: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var chefTitle: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        chefTitle.title = chefVO.name as String
         chefPicture.image = chefVO.images["chef"]
         chefName.text = chefVO.name as String
         chefAddress.text = chefVO.address as String
         chefDistance.text = chefVO.distance.stringValue + " km"
         
+        spinner.startAnimating()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         getItems()
+        spinner.stopAnimating()
+        collectionView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,6 +86,15 @@ class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UI
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
             return CGSizeMake(collectionView.bounds.width*0.485, collectionView.bounds.height*0.4924)
         
+    }
+    
+    // Pass the select chef infomation to next view
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showChefIntroduction" {
+            let chefIntroductionView = segue.destinationViewController as! ChefIntroViewController
+            chefIntroductionView.chefVO = chefVO
+            chefIntroductionView.itemsList = itemsList
+        }
     }
 }
 

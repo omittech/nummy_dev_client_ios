@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE171B27DAB700347045 /* ItemVO.swift */; };
+		5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */; };
 		5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4FBF911B268B06001340D3 /* ChefListViewController.swift */; };
 		5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1401E1B2681A7002341A6 /* ChefVO.swift */; };
 		5ED2056D1AE5CE9400CF2426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2056C1AE5CE9400CF2426 /* AppDelegate.swift */; };
@@ -96,6 +97,7 @@
 
 /* Begin PBXFileReference section */
 		5E38EE171B27DAB700347045 /* ItemVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemVO.swift; path = VO/ItemVO.swift; sourceTree = "<group>"; };
+		5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chefPicCell.swift; sourceTree = "<group>"; };
 		5E4FBF911B268B06001340D3 /* ChefListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListViewController.swift; sourceTree = "<group>"; };
 		5EC1401E1B2681A7002341A6 /* ChefVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChefVO.swift; path = VO/ChefVO.swift; sourceTree = "<group>"; };
 		5ED205671AE5CE9400CF2426 /* nummy_dev_client_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nummy_dev_client_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +200,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E38EE191B27E88D00347045 /* ChefIntroduction */ = {
+			isa = PBXGroup;
+			children = (
+				5ED2EE441B20125100D7B244 /* chefIntroductionCell.swift */,
+				5ED2EE451B20125100D7B244 /* ChefIntroViewController.swift */,
+				5ED2EE4E1B20126800D7B244 /* ingrdientCell.swift */,
+				5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */,
+			);
+			name = ChefIntroduction;
+			sourceTree = "<group>";
+		};
 		5EC1401D1B26817F002341A6 /* VO */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,13 +326,11 @@
 		5ED2058F1AE5CF7A00CF2426 /* chefsModule */ = {
 			isa = PBXGroup;
 			children = (
+				5E38EE191B27E88D00347045 /* ChefIntroduction */,
 				5EC140211B2681E2002341A6 /* ChefDetail */,
 				5EC140201B2681BC002341A6 /* ChefList */,
 				5ED205991AE72D3200CF2426 /* images */,
 				5ED205951AE7291100CF2426 /* chefs.storyboard */,
-				5ED2EE441B20125100D7B244 /* chefIntroductionCell.swift */,
-				5ED2EE451B20125100D7B244 /* ChefIntroViewController.swift */,
-				5ED2EE4E1B20126800D7B244 /* ingrdientCell.swift */,
 			);
 			name = chefsModule;
 			sourceTree = "<group>";
@@ -578,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */,
 				5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */,
 				5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */,
 				5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */,
