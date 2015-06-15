@@ -38,9 +38,10 @@ class ChefIntroViewController: UIViewController, UICollectionViewDelegate, UICol
             
             // set the height of the cell to recalculate size
             cell.chefIntroduction.text = chefVO.description as? String
+            cell.chefIntroduction.sizeToFit()
             cell.chefName.text = chefVO.name as? String
-            cell.chefAddr.text = (chefVO.city as! String) + (chefVO.province as! String)
-            
+            cell.chefAddr.text = (chefVO.city as! String) + ", " + (chefVO.province as! String)
+            collectionView.collectionViewLayout.invalidateLayout()
             return cell
         } else if(indexPath.row == 2) {
             let cell: UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("separatorCell", forIndexPath: indexPath) as! UICollectionViewCell
@@ -48,8 +49,10 @@ class ChefIntroViewController: UIViewController, UICollectionViewDelegate, UICol
         } else {
             var cell: ingrdientCell = collectionView.dequeueReusableCellWithReuseIdentifier("ingrdientCell", forIndexPath: indexPath) as! ingrdientCell
             cell.ingrdientDetailLabel.text = itemsList[indexPath.row - 3].description
+            cell.ingrdientDetailLabel.sizeToFit()
             cell.ingrdientNameLabel.text = itemsList[indexPath.row - 3].name
             cell.ingrdientPrice.text = "$"+itemsList[indexPath.row - 3].price.stringValue
+            collectionView.collectionViewLayout.invalidateLayout()
             return cell
         }
     }
@@ -72,11 +75,22 @@ class ChefIntroViewController: UIViewController, UICollectionViewDelegate, UICol
         if(indexPath.row == 0) {
             return CGSizeMake(collectionView.bounds.width*0.95, collectionView.bounds.height/4)
         } else if(indexPath.row == 1) {
-            return CGSizeMake(collectionView.bounds.width*0.95, collectionView.bounds.height * 0.1874)
+            var cell = collectionView.cellForItemAtIndexPath(indexPath) as? chefIntroductionCell
+            if( cell == nil){
+                return CGSizeMake(collectionView.bounds.width*0.95, collectionView.bounds.height * 0.0874)
+            } else {
+                return CGSizeMake(collectionView.bounds.width*0.95, cell!.chefName.frame.height + cell!.chefIntroduction.frame.height + 26)
+            }
         } else if(indexPath.row == 2) {
             return CGSizeMake(collectionView.bounds.width*0.95, collectionView.bounds.height * 0.0575)
         } else {
-            return CGSizeMake(collectionView.bounds.width*0.95, collectionView.bounds.height * 0.1874)
+            var cell = collectionView.cellForItemAtIndexPath(indexPath) as? ingrdientCell
+            if( cell == nil){
+                return CGSizeMake(collectionView.bounds.width*0.95, collectionView.bounds.height * 0.1874)
+            } else {
+                return CGSizeMake(collectionView.bounds.width*0.95, cell!.ingrdientDetailLabel.frame.height + 40)
+            }
+            
         }
         
         
