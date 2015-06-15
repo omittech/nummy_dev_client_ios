@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 let baseUrl = "http://frozen-island-6927.herokuapp.com"
+let userCoordinateLatitude = "userCoordinateLatitude"
+let userCoordinateLongitude = "userCoordinateLongitude"
 
 class ChefListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate{
     // record the number of cells in collection view(not including
@@ -117,7 +119,10 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
         var latitude = userLocation.coordinate.latitude
         var longitude = userLocation.coordinate.longitude
         
-        println("Latitude: \(latitude), Longitude: \(longitude)")
+        // store the coordinate locally
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(latitude.description, forKey: userCoordinateLatitude)
+        defaults.setObject(longitude.description, forKey: userCoordinateLongitude)
         
         locationManager.stopUpdatingLocation()
     }
@@ -131,4 +136,5 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
 }
+
 
