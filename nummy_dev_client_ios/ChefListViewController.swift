@@ -9,26 +9,31 @@
 import UIKit
 import MapKit
 import CoreLocation
+
+// base url for API calls
 let baseUrl = "http://frozen-island-6927.herokuapp.com"
 let userCoordinateLatitude = "userCoordinateLatitude"
 let userCoordinateLongitude = "userCoordinateLongitude"
 
-class ChefListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate{
+class ChefListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate, ENSideMenuDelegate{
     // record the number of cells in collection view(not including
     var numOfCell = 0
     var chefsList: [ChefVO] = [ChefVO]()
     var locationManager = CLLocationManager()
-    
-    // base url for api call
 
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var chefList: UICollectionView!
+    
+    @IBAction func toggleSideMenu(sender: AnyObject) {
+        toggleSideMenuView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.sideMenuController()?.sideMenu?.delegate = self
 
         let chefListBackground: UIImageView = UIImageView(image: UIImage(named: "loginbg.png"))
         chefListBackground.alpha = 0.5
@@ -134,6 +139,19 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
             let chefDetailView = segue.destinationViewController as! ChefDetailViewController
             chefDetailView.chefVO = chefsList[indexPath.row]
         }
+    }
+    
+    func sideMenuWillOpen() {
+        println("sideMenuWillOpen")
+    }
+    
+    func sideMenuWillClose() {
+        println("sideMenuWillClose")
+    }
+    
+    func sideMenuShouldOpenSideMenu() -> Bool {
+        println("sideMenuShouldOpenSideMenu")
+        return true
     }
 }
 

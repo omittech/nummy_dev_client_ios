@@ -28,6 +28,9 @@
                                     <navigationItem title="Nummy's Chef" id="XGT-oo-bFc">
                                         <barButtonItem key="leftBarButtonItem" image="menu_orange_52px.png" id="fcu-fK-JQh">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="toggleSideMenu:" destination="fa3-zq-ROP" id="scb-u9-WXq"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="cart.png" id="goK-SM-Wfu">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,6 +175,7 @@
                             <constraint firstItem="k6t-P6-kS6" firstAttribute="leading" secondItem="PMl-aO-nNE" secondAttribute="leadingMargin" constant="-16" id="zCe-k6-5Yr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="evi-lC-9uZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="chefList" destination="k6t-P6-kS6" id="aEg-8o-bnN"/>
@@ -181,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqd-sl-O3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300.5" y="69.5"/>
+            <point key="canvasLocation" x="1112.5" y="69.5"/>
         </scene>
         <!--Chef Detail View Controller-->
         <scene sceneID="g8E-uo-ZrK">
@@ -206,7 +210,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="backButton.png" id="Tip-4a-Ubz">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="fa3-zq-ROP" kind="show" identifier="backToChefListView" id="b1F-yd-XA9"/>
+                                                <segue destination="pkT-GN-d3G" kind="show" identifier="backToChefListView" id="b1F-yd-XA9"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="cart.png" id="u6i-jZ-BVu">
@@ -388,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lte-Gf-3DT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.5" y="69.5"/>
+            <point key="canvasLocation" x="1691.5" y="69.5"/>
         </scene>
         <!--Chef Intro View Controller-->
         <scene sceneID="UBG-1H-bEh">
@@ -667,7 +671,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xq-Ia-9Pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405.5" y="69.5"/>
+            <point key="canvasLocation" x="2217.5" y="69.5"/>
+        </scene>
+        <!--Chef List Navigation View-->
+        <scene sceneID="eGw-Ru-R1F">
+            <objects>
+                <navigationController storyboardIdentifier="chefNavigationView" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pkT-GN-d3G" customClass="ChefListNavigationView" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ro3-Qt-5Bu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="46N-YQ-Cpx">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="fa3-zq-ROP" kind="relationship" relationship="rootViewController" id="bNa-wP-Zu0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eT-yz-h5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617.5" y="69.5"/>
         </scene>
     </scenes>
     <resources>
@@ -688,6 +714,6 @@
         <image name="whiteBackground.png" width="266" height="276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wvy-iH-QT2"/>
+        <segue reference="M4n-ua-bFv"/>
     </inferredMetricsTieBreakers>
 </document>

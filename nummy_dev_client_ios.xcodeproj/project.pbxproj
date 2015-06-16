@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E373FD11B2FB51F00F5F9B7 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FCF1B2FB51F00F5F9B7 /* ENSideMenu.swift */; };
+		5E373FD21B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD01B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift */; };
+		5E373FD41B2FC1C800F5F9B7 /* ChefListNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */; };
+		5E373FD81B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD71B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift */; };
 		5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE171B27DAB700347045 /* ItemVO.swift */; };
 		5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */; };
 		5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4FBF911B268B06001340D3 /* ChefListViewController.swift */; };
@@ -96,6 +100,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E373FCF1B2FB51F00F5F9B7 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		5E373FD01B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListNavigationView.swift; sourceTree = "<group>"; };
+		5E373FD71B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationTableViewController.swift; sourceTree = "<group>"; };
 		5E38EE171B27DAB700347045 /* ItemVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemVO.swift; path = VO/ItemVO.swift; sourceTree = "<group>"; };
 		5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chefPicCell.swift; sourceTree = "<group>"; };
 		5E4FBF911B268B06001340D3 /* ChefListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +208,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E373FCE1B2FB4F500F5F9B7 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5E373FCF1B2FB51F00F5F9B7 /* ENSideMenu.swift */,
+				5E373FD01B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		5E38EE191B27E88D00347045 /* ChefIntroduction */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +240,7 @@
 		5EC140201B2681BC002341A6 /* ChefList */ = {
 			isa = PBXGroup;
 			children = (
+				5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */,
 				5ED2EE4C1B20126800D7B244 /* chefLocationCell.swift */,
 				5E4FBF911B268B06001340D3 /* ChefListViewController.swift */,
 			);
@@ -259,6 +277,7 @@
 		5ED205691AE5CE9400CF2426 /* nummy_dev_client_ios */ = {
 			isa = PBXGroup;
 			children = (
+				5E373FCE1B2FB4F500F5F9B7 /* Library */,
 				5EC1401D1B26817F002341A6 /* VO */,
 				CAD2D7F11B02A0EB006BA377 /* Frameworks */,
 				5ED2058D1AE5CF6600CF2426 /* features */,
@@ -331,6 +350,7 @@
 				5EC140201B2681BC002341A6 /* ChefList */,
 				5ED205991AE72D3200CF2426 /* images */,
 				5ED205951AE7291100CF2426 /* chefs.storyboard */,
+				5E373FD71B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift */,
 			);
 			name = chefsModule;
 			sourceTree = "<group>";
@@ -592,15 +612,19 @@
 				5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */,
 				5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */,
 				5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */,
+				5E373FD21B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift in Sources */,
 				5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */,
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,
 				CAD2D8001B02CFB9006BA377 /* SignUpViewController.swift in Sources */,
 				CA5AEBFD1B20A98E00F3CC21 /* thankYouViewController.swift in Sources */,
+				5E373FD41B2FC1C800F5F9B7 /* ChefListNavigationView.swift in Sources */,
 				5ED205941AE5D03C00CF2426 /* LoginViewController.swift in Sources */,
 				CA5AEBF91B20A89100F3CC21 /* orderReviewViewController.swift in Sources */,
 				5ED2056F1AE5CE9400CF2426 /* ViewController.swift in Sources */,
 				5ED2EE511B20126800D7B244 /* foodItemCell.swift in Sources */,
 				CA5AEBFB1B20A8EB00F3CC21 /* orderSummaryViewController.swift in Sources */,
+				5E373FD11B2FB51F00F5F9B7 /* ENSideMenu.swift in Sources */,
+				5E373FD81B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift in Sources */,
 				CAD2D7C31AF1ACA3006BA377 /* TermAndConditionsViewController.swift in Sources */,
 				5ED2EE521B20126800D7B244 /* ingrdientCell.swift in Sources */,
 				CAD2D7B11AEB3954006BA377 /* ForgetPasswordViewController.swift in Sources */,

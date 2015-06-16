@@ -18,7 +18,7 @@ class TermAndConditionsViewController: UIViewController {
     @IBAction func realLogin(sender: AnyObject) {
         
         var storyboard = UIStoryboard(name: "chefs", bundle: nil)
-        var controller = storyboard.instantiateViewControllerWithIdentifier("chefList") as! UIViewController
+        var controller = storyboard.instantiateViewControllerWithIdentifier("chefNavigationView") as! UIViewController
         self.presentViewController(controller, animated: true, completion: nil)
         
         
