@@ -132,6 +132,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     }
     
     func loginCheck(Username username: String, Password password: String)->Bool {
+        println("111")
         spinner.startAnimating()
         // get the project path of aes.js
         let cryptoJSpath = NSBundle.mainBundle().pathForResource("aes", ofType: "js")
@@ -145,7 +146,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         let decryptFunction = cryptoJScontext.objectForKeyedSubscript("decrypt")
         
         var encrypted = encryptFunction.callWithArguments([password, "thisisakey"])
-        //println(encrypted)
+        println(encrypted)
         //var decrypted = decryptFunction.callWithArguments([encrypted, "thisisakey"])
         //println(decrypted)
         
@@ -155,7 +156,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         var postsUrlRequest = NSMutableURLRequest(URL: NSURL(string: postsEndpoint)!)
         postsUrlRequest.HTTPMethod = "POST"
         
-        var newPost: NSDictionary = ["username": username, "password": encrypted];
+        var newPost: NSDictionary = ["username": username, "password": password];
         var postJSONError: NSError?
         var jsonPost = NSJSONSerialization.dataWithJSONObject(newPost, options: nil, error:  &postJSONError)
         postsUrlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
