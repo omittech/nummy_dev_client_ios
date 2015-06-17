@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E373FD11B2FB51F00F5F9B7 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FCF1B2FB51F00F5F9B7 /* ENSideMenu.swift */; };
+		5E373FD21B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD01B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift */; };
+		5E373FD41B2FC1C800F5F9B7 /* ChefListNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */; };
+		5E373FD81B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD71B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift */; };
+		5E373FDA1B310B6F00F5F9B7 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD91B310B6F00F5F9B7 /* SideMenuCell.swift */; };
+		5E373FDC1B310C4200F5F9B7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FDB1B310C4200F5F9B7 /* home.png */; };
+		5E373FDE1B3111E600F5F9B7 /* summary.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FDD1B3111E600F5F9B7 /* summary.png */; };
+		5E373FE01B3111F700F5F9B7 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FDF1B3111F700F5F9B7 /* account.png */; };
+		5E373FE21B31120900F5F9B7 /* bigNummy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FE11B31120900F5F9B7 /* bigNummy.png */; };
+		5E373FE41B3113DD00F5F9B7 /* shoppingcart.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FE31B3113DD00F5F9B7 /* shoppingcart.png */; };
 		5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE171B27DAB700347045 /* ItemVO.swift */; };
 		5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */; };
 		5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4FBF911B268B06001340D3 /* ChefListViewController.swift */; };
@@ -97,6 +107,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E373FCF1B2FB51F00F5F9B7 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		5E373FD01B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListNavigationView.swift; sourceTree = "<group>"; };
+		5E373FD71B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationTableViewController.swift; sourceTree = "<group>"; };
+		5E373FD91B310B6F00F5F9B7 /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		5E373FDB1B310C4200F5F9B7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		5E373FDD1B3111E600F5F9B7 /* summary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summary.png; sourceTree = "<group>"; };
+		5E373FDF1B3111F700F5F9B7 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
+		5E373FE11B31120900F5F9B7 /* bigNummy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigNummy.png; sourceTree = "<group>"; };
+		5E373FE31B3113DD00F5F9B7 /* shoppingcart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoppingcart.png; sourceTree = "<group>"; };
 		5E38EE171B27DAB700347045 /* ItemVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemVO.swift; path = VO/ItemVO.swift; sourceTree = "<group>"; };
 		5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chefPicCell.swift; sourceTree = "<group>"; };
 		5E4FBF911B268B06001340D3 /* ChefListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +222,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E373FCE1B2FB4F500F5F9B7 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5E373FCF1B2FB51F00F5F9B7 /* ENSideMenu.swift */,
+				5E373FD01B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		5E38EE191B27E88D00347045 /* ChefIntroduction */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +254,7 @@
 		5EC140201B2681BC002341A6 /* ChefList */ = {
 			isa = PBXGroup;
 			children = (
+				5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */,
 				5ED2EE4C1B20126800D7B244 /* chefLocationCell.swift */,
 				5E4FBF911B268B06001340D3 /* ChefListViewController.swift */,
 			);
@@ -261,6 +291,7 @@
 		5ED205691AE5CE9400CF2426 /* nummy_dev_client_ios */ = {
 			isa = PBXGroup;
 			children = (
+				5E373FCE1B2FB4F500F5F9B7 /* Library */,
 				5EC1401D1B26817F002341A6 /* VO */,
 				CAD2D7F11B02A0EB006BA377 /* Frameworks */,
 				5ED2058D1AE5CF6600CF2426 /* features */,
@@ -334,6 +365,8 @@
 				5EC140201B2681BC002341A6 /* ChefList */,
 				5ED205991AE72D3200CF2426 /* images */,
 				5ED205951AE7291100CF2426 /* chefs.storyboard */,
+				5E373FD91B310B6F00F5F9B7 /* SideMenuCell.swift */,
+				5E373FD71B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift */,
 			);
 			name = chefsModule;
 			sourceTree = "<group>";
@@ -353,6 +386,11 @@
 		5ED205991AE72D3200CF2426 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5E373FE31B3113DD00F5F9B7 /* shoppingcart.png */,
+				5E373FDB1B310C4200F5F9B7 /* home.png */,
+				5E373FDF1B3111F700F5F9B7 /* account.png */,
+				5E373FE11B31120900F5F9B7 /* bigNummy.png */,
+				5E373FDD1B3111E600F5F9B7 /* summary.png */,
 				5ED2EE1F1B2011BD00D7B244 /* chefPic.png */,
 				5ED2EE201B2011BD00D7B244 /* chefProfile.png */,
 				5ED2EE211B2011BD00D7B244 /* distance_orange_52px.png */,
@@ -528,6 +566,7 @@
 				5ED2EE1E1B2011A700D7B244 /* ChefFullPic.png in Resources */,
 				CA5AEBD51B1F760300F3CC21 /* 2.png in Resources */,
 				5ED2EE1A1B2011A700D7B244 /* burger.png in Resources */,
+				5E373FE41B3113DD00F5F9B7 /* shoppingcart.png in Resources */,
 				CA5AEBCF1B1F746C00F3CC21 /* arrow_orange_52px.png in Resources */,
 				CA5AEBDD1B1F76A800F3CC21 /* logo_big_client_white.png in Resources */,
 				5ED2EE381B2011BD00D7B244 /* heart.png in Resources */,
@@ -543,6 +582,7 @@
 				5ED205961AE7291100CF2426 /* chefs.storyboard in Resources */,
 				5ED2EE1D1B2011A700D7B244 /* cart.png in Resources */,
 				CA5AEBD91B1F767800F3CC21 /* login_orange_transpbg.png in Resources */,
+				5E373FDE1B3111E600F5F9B7 /* summary.png in Resources */,
 				CA5AEBE21B1F8D0500F3CC21 /* 48.png in Resources */,
 				5ED2EE321B2011BD00D7B244 /* chefProfile.png in Resources */,
 				CA5AEBC71B1EAFAE00F3CC21 /* 35.png in Resources */,
@@ -554,6 +594,7 @@
 				5ED2EE3B1B2011BD00D7B244 /* location_filled_orange_52px.png in Resources */,
 				CA5AEBD31B1F757400F3CC21 /* next_orange_text.png in Resources */,
 				5ED2EE3A1B2011BD00D7B244 /* lastScrollPage.png in Resources */,
+				5E373FE21B31120900F5F9B7 /* bigNummy.png in Resources */,
 				CA5AEBD71B1F762300F3CC21 /* 15.png in Resources */,
 				5ED205921AE5D00300CF2426 /* login.storyboard in Resources */,
 				5ED2EE331B2011BD00D7B244 /* distance_orange_52px.png in Resources */,
@@ -596,15 +637,19 @@
 				5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */,
 				5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */,
 				5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */,
+				5E373FD21B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift in Sources */,
 				5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */,
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,
 				CAD2D8001B02CFB9006BA377 /* SignUpViewController.swift in Sources */,
 				CA5AEBFD1B20A98E00F3CC21 /* thankYouViewController.swift in Sources */,
+				5E373FD41B2FC1C800F5F9B7 /* ChefListNavigationView.swift in Sources */,
 				5ED205941AE5D03C00CF2426 /* LoginViewController.swift in Sources */,
 				CA5AEBF91B20A89100F3CC21 /* orderReviewViewController.swift in Sources */,
 				5ED2056F1AE5CE9400CF2426 /* ViewController.swift in Sources */,
 				5ED2EE511B20126800D7B244 /* foodItemCell.swift in Sources */,
 				CA5AEBFB1B20A8EB00F3CC21 /* orderSummaryViewController.swift in Sources */,
+				5E373FD11B2FB51F00F5F9B7 /* ENSideMenu.swift in Sources */,
+				5E373FD81B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift in Sources */,
 				CAD2D7C31AF1ACA3006BA377 /* TermAndConditionsViewController.swift in Sources */,
 				5ED2EE521B20126800D7B244 /* ingrdientCell.swift in Sources */,
 				CAD2D7B11AEB3954006BA377 /* ForgetPasswordViewController.swift in Sources */,
@@ -612,6 +657,7 @@
 				5ED2056D1AE5CE9400CF2426 /* AppDelegate.swift in Sources */,
 				5ED2EE491B20125100D7B244 /* ChefIntroViewController.swift in Sources */,
 				5ED2EE471B20125100D7B244 /* ChefDetailViewController.swift in Sources */,
+				5E373FDA1B310B6F00F5F9B7 /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

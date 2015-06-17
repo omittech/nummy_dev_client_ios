@@ -9,24 +9,31 @@
 import UIKit
 import MapKit
 import CoreLocation
-let baseUrl = "http://frozen-island-6927.herokuapp.com"
 
-class ChefListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate{
+// base url for API calls
+let baseUrl = "http://frozen-island-6927.herokuapp.com"
+let userCoordinateLatitude = "userCoordinateLatitude"
+let userCoordinateLongitude = "userCoordinateLongitude"
+
+class ChefListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate, ENSideMenuDelegate{
     // record the number of cells in collection view(not including
     var numOfCell = 0
     var chefsList: [ChefVO] = [ChefVO]()
     var locationManager = CLLocationManager()
-    
-    // base url for api call
 
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var chefList: UICollectionView!
+    
+    @IBAction func toggleSideMenu(sender: AnyObject) {
+        toggleSideMenuView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.sideMenuController()?.sideMenu?.delegate = self
 
         let chefListBackground: UIImageView = UIImageView(image: UIImage(named: "loginbg.png"))
         chefListBackground.alpha = 0.5
@@ -117,7 +124,10 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
         var latitude = userLocation.coordinate.latitude
         var longitude = userLocation.coordinate.longitude
         
-        println("Latitude: \(latitude), Longitude: \(longitude)")
+        // store the coordinate locally
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(latitude.description, forKey: userCoordinateLatitude)
+        defaults.setObject(longitude.description, forKey: userCoordinateLongitude)
         
         locationManager.stopUpdatingLocation()
     }
@@ -128,7 +138,28 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
             var indexPath: NSIndexPath = self.collectionView!.indexPathForCell(sender as! UICollectionViewCell)!
             let chefDetailView = segue.destinationViewController as! ChefDetailViewController
             chefDetailView.chefVO = chefsList[indexPath.row]
+            hideSideMenuView()
         }
     }
+    
+    // when click on other area, hide the side menu
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        hideSideMenuView()
+    }
+    
+    func sideMenuWillOpen() {
+        // ignore any click on collection view
+        collectionView.userInteractionEnabled = false
+    }
+    
+    func sideMenuWillClose() {
+        // resume to accept user click on collection view
+        collectionView.userInteractionEnabled = true
+    }
+    
+    func sideMenuShouldOpenSideMenu() -> Bool {
+        return true
+    }
 }
+
 
