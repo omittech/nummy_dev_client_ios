@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JavaScriptCore
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDelegate {
     
@@ -15,7 +16,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     @IBOutlet var password_field: UITextField!
     
     @IBOutlet var username_field: UITextField!
-    
+
+    @IBOutlet var spinner: UIActivityIndicatorView!
     // Facebook Delegate Methods
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
@@ -80,10 +82,16 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         
         //check the database to see if the un/pw are correct
         if loginCheck(Username: username, Password: password) {
+            //if login success, then segue to next page
             performSegueWithIdentifier("loginSuccessSegue", sender: self)
         }
         else {
-            
+            //if login failed, pop-up a alert
+            var alertView = UIAlertView();
+            alertView.addButtonWithTitle("OK");
+            alertView.title = "Login failed";
+            alertView.message = "Invalid login information";
+            alertView.show();
         }
     }
 
@@ -95,6 +103,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     }
     
     override func viewDidAppear(animated: Bool) {
+        spinner.stopAnimating()
         
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
@@ -123,35 +132,55 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     }
     
     func loginCheck(Username username: String, Password password: String)->Bool {
+        println("111")
+        spinner.startAnimating()
+        // get the project path of aes.js
+        let cryptoJSpath = NSBundle.mainBundle().pathForResource("aes", ofType: "js")
+        // Retrieve the content of aes.js
+        var error:NSError?
+        let cryptoJS = String(contentsOfFile: cryptoJSpath!, encoding:NSUTF8StringEncoding, error: &error)
 
+        let cryptoJScontext = JSContext()
+        cryptoJScontext.evaluateScript(cryptoJS)
+        let encryptFunction = cryptoJScontext.objectForKeyedSubscript("encrypt")
+        let decryptFunction = cryptoJScontext.objectForKeyedSubscript("decrypt")
+        
+        var encrypted = encryptFunction.callWithArguments([password, "thisisakey"])
+        println(encrypted)
+        //var decrypted = decryptFunction.callWithArguments([encrypted, "thisisakey"])
+        //println(decrypted)
+        
         // MARK: POST
         // Create new post
-        var postsEndpoint: String = "http://ancient-taiga-3819.herokuapp.com/api/login"
+        var postsEndpoint: String = "http://frozen-island-6927.herokuapp.com/api/login"
         var postsUrlRequest = NSMutableURLRequest(URL: NSURL(string: postsEndpoint)!)
         postsUrlRequest.HTTPMethod = "POST"
         
         var newPost: NSDictionary = ["username": username, "password": password];
         var postJSONError: NSError?
         var jsonPost = NSJSONSerialization.dataWithJSONObject(newPost, options: nil, error:  &postJSONError)
+        postsUrlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         postsUrlRequest.HTTPBody = jsonPost
         
-//        var data: NSData!
-//        data = NSURLConnection.sendSynchronousRequest(postsUrlRequest, returningResponse: nil, error: &postJSONError)
-//        var jsonError: NSError?
-//        let post = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as! NSDictionary
-//        /*let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError)
-//        if let unwrappedError = jsonError {
-//            println("json error: \(unwrappedError)")
-//        } else {
-//            //println("The post is:" + post.description)
-//        }*/
-//        var status: NSString! = post.valueForKey("status") as! NSString
-//        if (status == "fail") {
-//            
-//            println("login failed")
-//            return false
-//        }
-//        println("login success")
+        var data: NSData!
+        data = NSURLConnection.sendSynchronousRequest(postsUrlRequest, returningResponse: nil, error: &postJSONError)
+        var jsonError: NSError?
+        let post = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as! NSDictionary
+        /*let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError)
+        if let unwrappedError = jsonError {
+            println("json error: \(unwrappedError)")
+        } else {
+            //println("The post is:" + post.description)
+        }*/
+        var status: NSString! = post.valueForKey("status") as! NSString
+        if (status == "fail") {
+            
+            println("login failed")
+            spinner.stopAnimating()
+            return false
+        }
+        println("login success")
+        spinner.stopAnimating()
         return true
     }
     

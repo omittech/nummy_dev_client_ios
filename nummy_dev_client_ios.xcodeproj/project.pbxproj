@@ -60,6 +60,7 @@
 		5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2EE4C1B20126800D7B244 /* chefLocationCell.swift */; };
 		5ED2EE511B20126800D7B244 /* foodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2EE4D1B20126800D7B244 /* foodItemCell.swift */; };
 		5ED2EE521B20126800D7B244 /* ingrdientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2EE4E1B20126800D7B244 /* ingrdientCell.swift */; };
+		CA38F5261B2E875F000BF338 /* aes.js in Resources */ = {isa = PBXBuildFile; fileRef = CA38F5251B2E875F000BF338 /* aes.js */; };
 		CA5AEBBD1B1EAF0E00F3CC21 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBBC1B1EAF0E00F3CC21 /* 14.png */; };
 		CA5AEBBF1B1EAF3000F3CC21 /* 16.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBBE1B1EAF3000F3CC21 /* 16.png */; };
 		CA5AEBC11B1EAF5000F3CC21 /* 36.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBC01B1EAF5000F3CC21 /* 36.png */; };
@@ -163,6 +164,7 @@
 		5ED2EE4C1B20126800D7B244 /* chefLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chefLocationCell.swift; sourceTree = "<group>"; };
 		5ED2EE4D1B20126800D7B244 /* foodItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodItemCell.swift; sourceTree = "<group>"; };
 		5ED2EE4E1B20126800D7B244 /* ingrdientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ingrdientCell.swift; sourceTree = "<group>"; };
+		CA38F5251B2E875F000BF338 /* aes.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = aes.js; sourceTree = "<group>"; };
 		CA5AEBBC1B1EAF0E00F3CC21 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
 		CA5AEBBE1B1EAF3000F3CC21 /* 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 16.png; sourceTree = "<group>"; };
 		CA5AEBC01B1EAF5000F3CC21 /* 36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 36.png; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				5EC1401D1B26817F002341A6 /* VO */,
 				CAD2D7F11B02A0EB006BA377 /* Frameworks */,
 				5ED2058D1AE5CF6600CF2426 /* features */,
+				CA38F5251B2E875F000BF338 /* aes.js */,
 				5ED2056C1AE5CE9400CF2426 /* AppDelegate.swift */,
 				CA6AE17D1B115A28001FDAEF /* Bridging-Header.h */,
 				5ED2056E1AE5CE9400CF2426 /* ViewController.swift */,
@@ -559,8 +562,7 @@
 			files = (
 				5ED2EE341B2011BD00D7B244 /* FindChef.png in Resources */,
 				CA5AEBDF1B1F76BF00F3CC21 /* loginbg.png in Resources */,
-				5E373FDC1B310C4200F5F9B7 /* home.png in Resources */,
-				5E373FE01B3111F700F5F9B7 /* account.png in Resources */,
+				CA38F5261B2E875F000BF338 /* aes.js in Resources */,
 				5ED2EE1E1B2011A700D7B244 /* ChefFullPic.png in Resources */,
 				CA5AEBD51B1F760300F3CC21 /* 2.png in Resources */,
 				5ED2EE1A1B2011A700D7B244 /* burger.png in Resources */,

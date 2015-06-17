@@ -52,7 +52,7 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
         //call send password email
         // MARK: POST
         // Create new post
-        var postsEndpoint: String = "http://afternoon-springs-1132.herokuapp.com/sendPassword"  //not created yet
+        var postsEndpoint: String = "http://frozen-island-6927.herokuapp.com/sendPassword"  //not created yet
         var postsUrlRequest = NSMutableURLRequest(URL: NSURL(string: postsEndpoint)!)
         postsUrlRequest.HTTPMethod = "POST"
         
