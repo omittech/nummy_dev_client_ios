@@ -96,6 +96,12 @@ public class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
             updateFrame()
         }
     }
+    public var menuHeight : CGFloat = 0 {
+        didSet {
+            needUpdateApperance = true
+            updateFrame()
+        }
+    }
     private var menuPosition:ENSideMenuPosition = .Left
     public var bouncingEnabled :Bool = true
     public var animationDuration = 0.4
@@ -164,9 +170,9 @@ public class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
             (menuPosition == .Left) ?
                 isMenuOpen ? 0 : -menuWidth-1.0 :
                 isMenuOpen ? width - menuWidth : width+1.0,
-            sourceView.frame.origin.y,
+            (menuHeight == 0) ? sourceView.frame.origin.y : (sourceView.frame.origin.y + height - menuHeight),
             menuWidth,
-            height
+            (menuHeight == 0) ? height : menuHeight
         )
         sideMenuContainerView.frame = menuFrame
     }

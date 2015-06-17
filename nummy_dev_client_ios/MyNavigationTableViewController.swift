@@ -9,14 +9,22 @@
 import UIKit
 
 class MyNavigationTableViewController: UITableViewController {
-    var selectedMenuItem : Int = 0
+    var selectedMenuItem : Int = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Customize apperance of table view
         tableView.contentInset = UIEdgeInsetsMake(64.0, 0, 0, 0) //
         tableView.separatorStyle = .None
-        tableView.backgroundColor = UIColor.clearColor()
+//        tableView.backgroundColor = UIColor.clearColor()
+
+        var color = 0xEFBDA5
+        tableView.backgroundColor = UIColor(
+            red: CGFloat((color & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((color & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(color & 0x0000FF) / 255.0,
+            alpha: CGFloat(0)
+        )
         tableView.scrollsToTop = false
         
         // Preserve selection between presentations
@@ -39,13 +47,12 @@ class MyNavigationTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 4
+        return 5
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
-        
         if (cell == nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CELL")
             cell!.backgroundColor = UIColor.clearColor()
@@ -55,20 +62,74 @@ class MyNavigationTableViewController: UITableViewController {
             cell!.selectedBackgroundView = selectedBackgroundView
         }
         
-        cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
+        switch (indexPath.row) {
+        case 0:
+            var menuImage = UIImage(named: "bigNummy.png")
+            var subview = UIImageView(frame: CGRectMake(30, 10, 130, 150))
+            subview.image = menuImage
+            cell!.addSubview(subview)
+            break
+        case 1:
+            var menuLabel = UILabel(frame: CGRectMake(50, -7, 100, 70))
+            menuLabel.attributedText = NSAttributedString(string: "Home", attributes: [NSForegroundColorAttributeName:UIColor.darkGrayColor()])
+            
+            var menuImage = UIImage(named: "home.png")
+            var subview = UIImageView(frame: CGRectMake(15, 10, 30, 30))
+            subview.image = menuImage
+            cell!.addSubview(menuLabel)
+            cell!.addSubview(subview)
+
+            break
+        case 2:
+            var menuLabel = UILabel(frame: CGRectMake(50, -7, 200, 70))
+            menuLabel.attributedText = NSAttributedString(string: "Shopping Cart", attributes: [NSForegroundColorAttributeName:UIColor.darkGrayColor()])
+            
+            var menuImage = UIImage(named: "shoppingcart.png")
+            var subview = UIImageView(frame: CGRectMake(15, 10, 30, 30))
+            subview.image = menuImage
+            cell!.addSubview(menuLabel)
+            cell!.addSubview(subview)
+            break
+        case 3:
+            var menuLabel = UILabel(frame: CGRectMake(50, -7, 200, 70))
+            menuLabel.attributedText = NSAttributedString(string: "Summary", attributes: [NSForegroundColorAttributeName:UIColor.darkGrayColor()])
+            
+            var menuImage = UIImage(named: "summary.png")
+            var subview = UIImageView(frame: CGRectMake(15, 13, 30, 30))
+            subview.image = menuImage
+            cell!.addSubview(menuLabel)
+            cell!.addSubview(subview)
+            break
+        default:
+            var menuLabel = UILabel(frame: CGRectMake(50, -7, 200, 70))
+            menuLabel.attributedText = NSAttributedString(string: "My Account", attributes: [NSForegroundColorAttributeName:UIColor.darkGrayColor()])
+            
+            var menuImage = UIImage(named: "account.png")
+            var subview = UIImageView(frame: CGRectMake(15, 13, 30, 30))
+            subview.image = menuImage
+            cell!.addSubview(menuLabel)
+            cell!.addSubview(subview)
+            break
+        }
         
         return cell!
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50.0
+        if indexPath.row == 0 {
+            return 200.0
+        } else {
+            return 50.0
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         println("did select row: \(indexPath.row)")
+
         
         if (indexPath.row == selectedMenuItem) {
+                    println("did select row: \(indexPath.row)")
+            hideSideMenuView()
             return
         }
         selectedMenuItem = indexPath.row

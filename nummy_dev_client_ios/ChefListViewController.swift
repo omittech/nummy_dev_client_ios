@@ -138,19 +138,26 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
             var indexPath: NSIndexPath = self.collectionView!.indexPathForCell(sender as! UICollectionViewCell)!
             let chefDetailView = segue.destinationViewController as! ChefDetailViewController
             chefDetailView.chefVO = chefsList[indexPath.row]
+            hideSideMenuView()
         }
     }
     
+    // when click on other area, hide the side menu
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        hideSideMenuView()
+    }
+    
     func sideMenuWillOpen() {
-        println("sideMenuWillOpen")
+        // ignore any click on collection view
+        collectionView.userInteractionEnabled = false
     }
     
     func sideMenuWillClose() {
-        println("sideMenuWillClose")
+        // resume to accept user click on collection view
+        collectionView.userInteractionEnabled = true
     }
     
     func sideMenuShouldOpenSideMenu() -> Bool {
-        println("sideMenuShouldOpenSideMenu")
         return true
     }
 }

@@ -15,6 +15,7 @@ class ChefListNavigationView: ENSideMenuNavigationController, ENSideMenuDelegate
         sideMenu = ENSideMenu(sourceView: self.view, menuViewController: MyNavigationTableViewController(), menuPosition:.Left)
         //sideMenu?.delegate = self //optional
         sideMenu?.menuWidth = 180.0 // optional, default is 160
+        sideMenu?.menuHeight = 603
         //sideMenu?.bouncingEnabled = false
         
         // make navigation bar showing over side menu
