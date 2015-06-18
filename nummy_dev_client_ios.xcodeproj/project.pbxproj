@@ -12,11 +12,11 @@
 		5E373FD41B2FC1C800F5F9B7 /* ChefListNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */; };
 		5E373FD81B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD71B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift */; };
 		5E373FDA1B310B6F00F5F9B7 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD91B310B6F00F5F9B7 /* SideMenuCell.swift */; };
-		5E373FDC1B310C4200F5F9B7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FDB1B310C4200F5F9B7 /* home.png */; };
 		5E373FDE1B3111E600F5F9B7 /* summary.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FDD1B3111E600F5F9B7 /* summary.png */; };
-		5E373FE01B3111F700F5F9B7 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FDF1B3111F700F5F9B7 /* account.png */; };
 		5E373FE21B31120900F5F9B7 /* bigNummy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FE11B31120900F5F9B7 /* bigNummy.png */; };
 		5E373FE41B3113DD00F5F9B7 /* shoppingcart.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FE31B3113DD00F5F9B7 /* shoppingcart.png */; };
+		5E373FE81B32445900F5F9B7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FE71B32445900F5F9B7 /* home.png */; };
+		5E373FEA1B32446200F5F9B7 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FE91B32446200F5F9B7 /* account.png */; };
 		5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE171B27DAB700347045 /* ItemVO.swift */; };
 		5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */; };
 		5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4FBF911B268B06001340D3 /* ChefListViewController.swift */; };
@@ -112,11 +112,11 @@
 		5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListNavigationView.swift; sourceTree = "<group>"; };
 		5E373FD71B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationTableViewController.swift; sourceTree = "<group>"; };
 		5E373FD91B310B6F00F5F9B7 /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
-		5E373FDB1B310C4200F5F9B7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		5E373FDD1B3111E600F5F9B7 /* summary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summary.png; sourceTree = "<group>"; };
-		5E373FDF1B3111F700F5F9B7 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
 		5E373FE11B31120900F5F9B7 /* bigNummy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigNummy.png; sourceTree = "<group>"; };
 		5E373FE31B3113DD00F5F9B7 /* shoppingcart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoppingcart.png; sourceTree = "<group>"; };
+		5E373FE71B32445900F5F9B7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		5E373FE91B32446200F5F9B7 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
 		5E38EE171B27DAB700347045 /* ItemVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemVO.swift; path = VO/ItemVO.swift; sourceTree = "<group>"; };
 		5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chefPicCell.swift; sourceTree = "<group>"; };
 		5E4FBF911B268B06001340D3 /* ChefListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListViewController.swift; sourceTree = "<group>"; };
@@ -386,9 +386,9 @@
 		5ED205991AE72D3200CF2426 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5E373FE91B32446200F5F9B7 /* account.png */,
 				5E373FE31B3113DD00F5F9B7 /* shoppingcart.png */,
-				5E373FDB1B310C4200F5F9B7 /* home.png */,
-				5E373FDF1B3111F700F5F9B7 /* account.png */,
+				5E373FE71B32445900F5F9B7 /* home.png */,
 				5E373FE11B31120900F5F9B7 /* bigNummy.png */,
 				5E373FDD1B3111E600F5F9B7 /* summary.png */,
 				5ED2EE1F1B2011BD00D7B244 /* chefPic.png */,
@@ -597,6 +597,7 @@
 				5E373FE21B31120900F5F9B7 /* bigNummy.png in Resources */,
 				CA5AEBD71B1F762300F3CC21 /* 15.png in Resources */,
 				5ED205921AE5D00300CF2426 /* login.storyboard in Resources */,
+				5E373FEA1B32446200F5F9B7 /* account.png in Resources */,
 				5ED2EE331B2011BD00D7B244 /* distance_orange_52px.png in Resources */,
 				5ED2EE421B2011BD00D7B244 /* whiteBackground.png in Resources */,
 				5ED2EE411B2011BD00D7B244 /* separator.png in Resources */,
@@ -606,6 +607,7 @@
 				CA5AEC021B20B08E00F3CC21 /* 24.png in Resources */,
 				5ED2EE3F1B2011BD00D7B244 /* recommendItem.png in Resources */,
 				CA5AEC041B20B10E00F3CC21 /* 31.png in Resources */,
+				5E373FE81B32445900F5F9B7 /* home.png in Resources */,
 				5ED2EE401B2011BD00D7B244 /* restaurantPic.png in Resources */,
 				5ED2EE1C1B2011A700D7B244 /* cart_orange_52px.png in Resources */,
 				5ED2EE361B2011BD00D7B244 /* foodBackground.png in Resources */,
