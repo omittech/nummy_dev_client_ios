@@ -20,6 +20,13 @@
 		5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE171B27DAB700347045 /* ItemVO.swift */; };
 		5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */; };
 		5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4FBF911B268B06001340D3 /* ChefListViewController.swift */; };
+		5E9DFEEE1B324BB600B474F2 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */; };
+		5E9DFEF11B32549600B474F2 /* CartRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */; };
+		5E9DFEF31B326ACE00B474F2 /* rightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF21B326ACE00B474F2 /* rightArrow.png */; };
+		5E9DFEF51B326D4600B474F2 /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF41B326D4600B474F2 /* CartItemCell.swift */; };
+		5E9DFEF71B32710C00B474F2 /* cartItemPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF61B32710C00B474F2 /* cartItemPic.png */; };
+		5E9DFEF91B3274AD00B474F2 /* CartPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF81B3274AD00B474F2 /* CartPriceCell.swift */; };
+		5E9DFEFD1B339BFA00B474F2 /* orderSeperator.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9DFEFC1B339BFA00B474F2 /* orderSeperator.png */; };
 		5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1401E1B2681A7002341A6 /* ChefVO.swift */; };
 		5ED2056D1AE5CE9400CF2426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2056C1AE5CE9400CF2426 /* AppDelegate.swift */; };
 		5ED2056F1AE5CE9400CF2426 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2056E1AE5CE9400CF2426 /* ViewController.swift */; };
@@ -123,6 +130,13 @@
 		5E38EE171B27DAB700347045 /* ItemVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemVO.swift; path = VO/ItemVO.swift; sourceTree = "<group>"; };
 		5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chefPicCell.swift; sourceTree = "<group>"; };
 		5E4FBF911B268B06001340D3 /* ChefListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListViewController.swift; sourceTree = "<group>"; };
+		5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartRestaurantCell.swift; sourceTree = "<group>"; };
+		5E9DFEF21B326ACE00B474F2 /* rightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrow.png; sourceTree = "<group>"; };
+		5E9DFEF41B326D4600B474F2 /* CartItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
+		5E9DFEF61B32710C00B474F2 /* cartItemPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartItemPic.png; sourceTree = "<group>"; };
+		5E9DFEF81B3274AD00B474F2 /* CartPriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartPriceCell.swift; sourceTree = "<group>"; };
+		5E9DFEFC1B339BFA00B474F2 /* orderSeperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderSeperator.png; sourceTree = "<group>"; };
 		5EC1401E1B2681A7002341A6 /* ChefVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChefVO.swift; path = VO/ChefVO.swift; sourceTree = "<group>"; };
 		5ED205671AE5CE9400CF2426 /* nummy_dev_client_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nummy_dev_client_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED2056B1AE5CE9400CF2426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -248,6 +262,17 @@
 			name = ChefIntroduction;
 			sourceTree = "<group>";
 		};
+		5E9DFEEF1B32544000B474F2 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */,
+				5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */,
+				5E9DFEF41B326D4600B474F2 /* CartItemCell.swift */,
+				5E9DFEF81B3274AD00B474F2 /* CartPriceCell.swift */,
+			);
+			name = ShoppingCart;
+			sourceTree = "<group>";
+		};
 		5EC1401D1B26817F002341A6 /* VO */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,7 +325,7 @@
 				5E373FCE1B2FB4F500F5F9B7 /* Library */,
 				5EC1401D1B26817F002341A6 /* VO */,
 				CAD2D7F11B02A0EB006BA377 /* Frameworks */,
-				5ED2058D1AE5CF6600CF2426 /* features */,
+				5ED2058D1AE5CF6600CF2426 /* Features */,
 				CA38F5251B2E875F000BF338 /* aes.js */,
 				5ED2056C1AE5CE9400CF2426 /* AppDelegate.swift */,
 				CA6AE17D1B115A28001FDAEF /* Bridging-Header.h */,
@@ -338,7 +363,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5ED2058D1AE5CF6600CF2426 /* features */ = {
+		5ED2058D1AE5CF6600CF2426 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				CAE5444A1B339F07007674E0 /* summaryModule */,
@@ -346,7 +371,7 @@
 				5ED2058F1AE5CF7A00CF2426 /* chefsModule */,
 				5ED2058E1AE5CF7000CF2426 /* loginModule */,
 			);
-			name = features;
+			name = Features;
 			sourceTree = "<group>";
 		};
 		5ED2058E1AE5CF7000CF2426 /* loginModule */ = {
@@ -381,6 +406,7 @@
 		5ED205901AE5CF9F00CF2426 /* orderModule */ = {
 			isa = PBXGroup;
 			children = (
+				5E9DFEEF1B32544000B474F2 /* ShoppingCart */,
 				CA5AEBFE1B20A9E900F3CC21 /* images */,
 				CA5AEBF61B20A80B00F3CC21 /* order.storyboard */,
 				CA5AEBF81B20A89100F3CC21 /* orderReviewViewController.swift */,
@@ -429,6 +455,9 @@
 		CA5AEBFE1B20A9E900F3CC21 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5E9DFEFC1B339BFA00B474F2 /* orderSeperator.png */,
+				5E9DFEF61B32710C00B474F2 /* cartItemPic.png */,
+				5E9DFEF21B326ACE00B474F2 /* rightArrow.png */,
 				CA5AEC031B20B10E00F3CC21 /* 31.png */,
 				CA5AEC011B20B08E00F3CC21 /* 24.png */,
 				CA5AEBFF1B20AB7100F3CC21 /* 23.png */,
@@ -580,6 +609,7 @@
 				5ED2EE341B2011BD00D7B244 /* FindChef.png in Resources */,
 				CA5AEBDF1B1F76BF00F3CC21 /* loginbg.png in Resources */,
 				CA38F5261B2E875F000BF338 /* aes.js in Resources */,
+				5E9DFEF71B32710C00B474F2 /* cartItemPic.png in Resources */,
 				5ED2EE1E1B2011A700D7B244 /* ChefFullPic.png in Resources */,
 				CA5AEBD51B1F760300F3CC21 /* nummy.png in Resources */,
 				5ED2EE1A1B2011A700D7B244 /* burger.png in Resources */,
@@ -596,9 +626,11 @@
 				5ED2EE391B2011BD00D7B244 /* ingrdient.png in Resources */,
 				CA5AEBF71B20A80B00F3CC21 /* order.storyboard in Resources */,
 				CA5AEBC91B1EAFD100F3CC21 /* signup_orange_text.png in Resources */,
+				5E9DFEFD1B339BFA00B474F2 /* orderSeperator.png in Resources */,
 				5ED205961AE7291100CF2426 /* chefs.storyboard in Resources */,
 				5ED2EE1D1B2011A700D7B244 /* cart.png in Resources */,
 				CA5AEBD91B1F767800F3CC21 /* login_orange_transpbg.png in Resources */,
+				5E9DFEF31B326ACE00B474F2 /* rightArrow.png in Resources */,
 				5E373FDE1B3111E600F5F9B7 /* summary.png in Resources */,
 				CA5AEBE21B1F8D0500F3CC21 /* emailSelected.png in Resources */,
 				5ED2EE321B2011BD00D7B244 /* chefProfile.png in Resources */,
@@ -659,6 +691,8 @@
 				5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */,
 				5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */,
 				5E373FD21B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift in Sources */,
+				5E9DFEEE1B324BB600B474F2 /* ShoppingCartViewController.swift in Sources */,
+				5E9DFEF51B326D4600B474F2 /* CartItemCell.swift in Sources */,
 				5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */,
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,
 				CAD2D8001B02CFB9006BA377 /* SignUpViewController.swift in Sources */,
@@ -670,7 +704,9 @@
 				5ED2EE511B20126800D7B244 /* foodItemCell.swift in Sources */,
 				CA5AEBFB1B20A8EB00F3CC21 /* orderSummaryViewController.swift in Sources */,
 				5E373FD11B2FB51F00F5F9B7 /* ENSideMenu.swift in Sources */,
+				5E9DFEF11B32549600B474F2 /* CartRestaurantCell.swift in Sources */,
 				5E373FD81B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift in Sources */,
+				5E9DFEF91B3274AD00B474F2 /* CartPriceCell.swift in Sources */,
 				CAD2D7C31AF1ACA3006BA377 /* TermAndConditionsViewController.swift in Sources */,
 				5ED2EE521B20126800D7B244 /* ingrdientCell.swift in Sources */,
 				CAD2D7B11AEB3954006BA377 /* ForgetPasswordViewController.swift in Sources */,
