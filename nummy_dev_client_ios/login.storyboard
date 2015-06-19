@@ -193,20 +193,20 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Term and Conditions" id="2gQ-DP-E0f">
-                                        <barButtonItem key="leftBarButtonItem" image="5.png" id="wo5-Sg-exH">
+                                        <barButtonItem key="leftBarButtonItem" image="back_arrow.png" id="wo5-Sg-exH">
                                             <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="backToLogin:" destination="Bg4-0f-0uw" id="Tqc-4g-tKG"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="4.png" id="hGE-xP-Vmh">
+                                        <barButtonItem key="rightBarButtonItem" image="cart_button.png" id="hGE-xP-Vmh">
                                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="zR5-OA-len">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nummy.png" translatesAutoresizingMaskIntoConstraints="NO" id="zR5-OA-len">
                                 <rect key="frame" x="121" y="99" width="133" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="fac-2Q-9RT"/>
@@ -236,7 +236,7 @@
                                     <constraint firstAttribute="height" constant="42" id="INo-KA-0Qh"/>
                                     <constraint firstAttribute="width" constant="216" id="XyG-uG-PVX"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="12.png">
+                                <state key="normal" title="Button" image="accept_button.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -287,14 +287,14 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Sign Up" id="FWm-5a-SHP">
-                                        <barButtonItem key="leftBarButtonItem" image="5.png" id="8sq-r7-yt5">
+                                        <barButtonItem key="leftBarButtonItem" image="back_arrow.png" id="8sq-r7-yt5">
                                             <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="backToLogin:" destination="23Z-BP-zqd" id="7y3-Gd-rab"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="4.png" id="0vH-kd-CEd">
+                                        <barButtonItem key="rightBarButtonItem" image="cart_button.png" id="0vH-kd-CEd">
                                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
@@ -348,7 +348,7 @@
                                     <constraint firstAttribute="height" constant="30" id="ssw-78-Acx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7EE-hg-z0I">
                                 <rect key="frame" x="16" y="403" width="343" height="30"/>
@@ -358,7 +358,7 @@
                                     <constraint firstAttribute="height" constant="30" id="qfi-IP-cZC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Re-enter password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esd-9O-Qk1">
                                 <rect key="frame" x="16" y="380" width="146" height="15"/>
@@ -413,11 +413,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrD-4F-SNO">
                                 <rect key="frame" x="175" y="541" width="25" height="25"/>
-                                <state key="normal" image="14.png">
+                                <state key="normal" image="locationSelected.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="15.png" translatesAutoresizingMaskIntoConstraints="NO" id="efR-AS-ixu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="efR-AS-ixu">
                                 <rect key="frame" x="155" y="116" width="65" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="gVj-MZ-uGQ"/>
@@ -426,7 +426,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxb-Tb-v32">
                                 <rect key="frame" x="205" y="174" width="41" height="16"/>
-                                <state key="normal" backgroundImage="16.png">
+                                <state key="normal" backgroundImage="edit_button.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -539,20 +539,20 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Find Your Password" id="9JB-uA-L0i">
-                                        <barButtonItem key="leftBarButtonItem" image="5.png" id="a3F-6q-CxM">
+                                        <barButtonItem key="leftBarButtonItem" image="back_arrow.png" id="a3F-6q-CxM">
                                             <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="backToLogin:" destination="KXU-j9-pGY" id="Hvr-lx-HoV"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="4.png" id="s6D-j7-Uni">
+                                        <barButtonItem key="rightBarButtonItem" image="cart_button.png" id="s6D-j7-Uni">
                                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.png" translatesAutoresizingMaskIntoConstraints="NO" id="M9J-RP-DIL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nummy.png" translatesAutoresizingMaskIntoConstraints="NO" id="M9J-RP-DIL">
                                 <rect key="frame" x="121" y="99" width="133" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="3Zz-Is-3E6"/>
@@ -596,7 +596,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awl-LZ-Ap9">
                                         <rect key="frame" x="20" y="30" width="33" height="23"/>
-                                        <state key="normal" image="34.png">
+                                        <state key="normal" image="email.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -605,7 +605,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bU-Di-w3Y">
                                         <rect key="frame" x="61" y="28" width="16" height="25"/>
-                                        <state key="normal" image="35.png">
+                                        <state key="normal" image="text.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -614,7 +614,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxZ-rC-BGl">
                                         <rect key="frame" x="15" y="209" width="218" height="42"/>
-                                        <state key="normal" image="36.png">
+                                        <state key="normal" image="done_button.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -655,22 +655,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="12.png" width="320" height="63"/>
-        <image name="14.png" width="47" height="47"/>
-        <image name="15.png" width="97" height="97"/>
-        <image name="16.png" width="59" height="24"/>
-        <image name="2.png" width="187" height="238"/>
-        <image name="34.png" width="48" height="35"/>
-        <image name="35.png" width="24" height="39"/>
-        <image name="36.png" width="320" height="63"/>
-        <image name="4.png" width="37" height="34"/>
-        <image name="5.png" width="25" height="34"/>
         <image name="Logo_big_costumer.png" width="408" height="379"/>
+        <image name="accept_button.png" width="320" height="63"/>
+        <image name="back_arrow.png" width="25" height="34"/>
+        <image name="cart_button.png" width="37" height="34"/>
+        <image name="done_button.png" width="320" height="63"/>
+        <image name="edit_button.png" width="59" height="24"/>
+        <image name="email.png" width="48" height="35"/>
+        <image name="locationSelected.png" width="47" height="47"/>
         <image name="login_orange_transpbg.png" width="467" height="175"/>
         <image name="loginbg.png" width="750" height="1334"/>
+        <image name="nummy.png" width="187" height="238"/>
+        <image name="profile_picture.png" width="97" height="97"/>
+        <image name="text.png" width="24" height="39"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gl7-Z6-uSb"/>
         <segue reference="dDm-VG-xZm"/>
+        <segue reference="KEB-R7-nmU"/>
     </inferredMetricsTieBreakers>
 </document>
