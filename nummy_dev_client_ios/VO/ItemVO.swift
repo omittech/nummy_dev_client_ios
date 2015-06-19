@@ -18,6 +18,7 @@ struct ItemVO {
     var isDelete: Bool = true
     var isHot: Bool = true
     var popularity: NSNumber = 0
+    var quantity:Int = 0
     
     init(dictionary : NSDictionary) {
         self.id = dictionary.valueForKey("_id") as! String
