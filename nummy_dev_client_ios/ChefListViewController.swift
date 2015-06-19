@@ -30,6 +30,13 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
         toggleSideMenuView()
     }
     
+    // show shopping cart page when clicked
+    @IBAction func goToCart(sender: AnyObject) {
+        var storyboard = UIStoryboard(name: "order", bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier("shoppingCart") as! UIViewController
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

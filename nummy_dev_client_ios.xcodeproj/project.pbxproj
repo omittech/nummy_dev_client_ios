@@ -27,6 +27,7 @@
 		5E9DFEF71B32710C00B474F2 /* cartItemPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF61B32710C00B474F2 /* cartItemPic.png */; };
 		5E9DFEF91B3274AD00B474F2 /* CartPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF81B3274AD00B474F2 /* CartPriceCell.swift */; };
 		5E9DFEFD1B339BFA00B474F2 /* orderSeperator.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9DFEFC1B339BFA00B474F2 /* orderSeperator.png */; };
+		5E9DFEFF1B33AC8900B474F2 /* ShoppingCartVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEFE1B33AC8900B474F2 /* ShoppingCartVO.swift */; };
 		5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1401E1B2681A7002341A6 /* ChefVO.swift */; };
 		5ED2056D1AE5CE9400CF2426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2056C1AE5CE9400CF2426 /* AppDelegate.swift */; };
 		5ED2056F1AE5CE9400CF2426 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2056E1AE5CE9400CF2426 /* ViewController.swift */; };
@@ -134,6 +135,7 @@
 		5E9DFEF61B32710C00B474F2 /* cartItemPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartItemPic.png; sourceTree = "<group>"; };
 		5E9DFEF81B3274AD00B474F2 /* CartPriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartPriceCell.swift; sourceTree = "<group>"; };
 		5E9DFEFC1B339BFA00B474F2 /* orderSeperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderSeperator.png; sourceTree = "<group>"; };
+		5E9DFEFE1B33AC8900B474F2 /* ShoppingCartVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartVO.swift; sourceTree = "<group>"; };
 		5EC1401E1B2681A7002341A6 /* ChefVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChefVO.swift; path = VO/ChefVO.swift; sourceTree = "<group>"; };
 		5ED205671AE5CE9400CF2426 /* nummy_dev_client_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nummy_dev_client_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED2056B1AE5CE9400CF2426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			children = (
 				5EC1401E1B2681A7002341A6 /* ChefVO.swift */,
 				5E38EE171B27DAB700347045 /* ItemVO.swift */,
+				5E9DFEFE1B33AC8900B474F2 /* ShoppingCartVO.swift */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -385,11 +388,11 @@
 		5ED2058F1AE5CF7A00CF2426 /* chefsModule */ = {
 			isa = PBXGroup;
 			children = (
+				5ED205951AE7291100CF2426 /* chefs.storyboard */,
 				5E38EE191B27E88D00347045 /* ChefIntroduction */,
 				5EC140211B2681E2002341A6 /* ChefDetail */,
 				5EC140201B2681BC002341A6 /* ChefList */,
 				5ED205991AE72D3200CF2426 /* images */,
-				5ED205951AE7291100CF2426 /* chefs.storyboard */,
 				5E373FD91B310B6F00F5F9B7 /* SideMenuCell.swift */,
 				5E373FD71B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift */,
 			);
@@ -399,9 +402,9 @@
 		5ED205901AE5CF9F00CF2426 /* orderModule */ = {
 			isa = PBXGroup;
 			children = (
+				CA5AEBF61B20A80B00F3CC21 /* order.storyboard */,
 				5E9DFEEF1B32544000B474F2 /* ShoppingCart */,
 				CA5AEBFE1B20A9E900F3CC21 /* images */,
-				CA5AEBF61B20A80B00F3CC21 /* order.storyboard */,
 				CA5AEBF81B20A89100F3CC21 /* orderReviewViewController.swift */,
 				CA5AEBFA1B20A8EB00F3CC21 /* orderSummaryViewController.swift */,
 				CA5AEBFC1B20A98E00F3CC21 /* thankYouViewController.swift */,
@@ -689,6 +692,7 @@
 				5E373FD81B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift in Sources */,
 				5E9DFEF91B3274AD00B474F2 /* CartPriceCell.swift in Sources */,
 				CAD2D7C31AF1ACA3006BA377 /* TermAndConditionsViewController.swift in Sources */,
+				5E9DFEFF1B33AC8900B474F2 /* ShoppingCartVO.swift in Sources */,
 				5ED2EE521B20126800D7B244 /* ingrdientCell.swift in Sources */,
 				CAD2D7B11AEB3954006BA377 /* ForgetPasswordViewController.swift in Sources */,
 				5ED2EE481B20125100D7B244 /* chefIntroductionCell.swift in Sources */,

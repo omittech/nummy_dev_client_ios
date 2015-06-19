@@ -131,12 +131,6 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location_filled_orange_52px.png" translatesAutoresizingMaskIntoConstraints="NO" id="ddI-Y7-N4F">
                                                             <rect key="frame" x="71" y="38" width="27" height="27"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hours today: 11:00 - 20:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjV-Q8-2AD">
-                                                            <rect key="frame" x="79" y="26" width="193" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="877 West 15th Ave. Vancouver, BC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5V-ct-hii">
                                                             <rect key="frame" x="92" y="40" width="208" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -160,7 +154,6 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="address" destination="e5V-ct-hii" id="5bS-XT-jRv"/>
-                                            <outlet property="hours" destination="VjV-Q8-2AD" id="BHq-Qn-OgX"/>
                                             <outlet property="restaurantName" destination="5D9-O8-wzP" id="UVq-j9-vKz"/>
                                             <outlet property="restaurantPicture" destination="5G6-2I-o5m" id="MQl-Fl-s9w"/>
                                         </connections>

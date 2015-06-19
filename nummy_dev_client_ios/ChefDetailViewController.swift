@@ -21,6 +21,35 @@ class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var chefTitle: UINavigationItem!
     
+    // show shopping cart page when clicked
+    @IBAction func goToCart(sender: AnyObject) {
+        var storyboard = UIStoryboard(name: "order", bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier("shoppingCart") as! UIViewController
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+
+    // Add the item to shopping cart when click
+    @IBAction func addToCart(sender: AnyObject) {
+        let button = sender as! UIButton
+        let view = button.superview!
+        let cell = view.superview as! foodItemCell
+        let indexPath = collectionView.indexPathForCell(cell)!
+        let itemToAdd = itemsList[indexPath.row]
+        
+        // if restaurant haven't got any item in cart, add restaurant
+        if(!contains(shoppingCartVO.chefIds, itemToAdd.restaurantId)) {
+            shoppingCartVO.chefIds.append(chefVO.id as String)
+            shoppingCartVO.chefs[chefVO.id as String] = chefVO
+        }
+        
+        // if item haven't got any item in cart, add item
+        if(!contains(shoppingCartVO.itemIds, itemToAdd.id)) {
+            shoppingCartVO.itemIds.append(itemToAdd.id)
+            shoppingCartVO.items[itemToAdd.id] = itemToAdd
+        }
+        shoppingCartVO.items[itemToAdd.id]?.quantity++
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
