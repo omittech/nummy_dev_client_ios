@@ -83,10 +83,16 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         //check the database to see if the un/pw are correct
         if loginCheck(Username: username, Password: password) {
             //if login success, then segue to next page
+            
+            spinner.stopAnimating()
+            
             performSegueWithIdentifier("loginSuccessSegue", sender: self)
         }
         else {
             //if login failed, pop-up a alert
+            
+            spinner.stopAnimating()
+            
             var alertView = UIAlertView();
             alertView.addButtonWithTitle("OK");
             alertView.title = "Login failed";
@@ -132,8 +138,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     }
     
     func loginCheck(Username username: String, Password password: String)->Bool {
-        println("111")
+        
         spinner.startAnimating()
+        
         // get the project path of aes.js
         let cryptoJSpath = NSBundle.mainBundle().pathForResource("aes", ofType: "js")
         // Retrieve the content of aes.js
@@ -146,9 +153,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         let decryptFunction = cryptoJScontext.objectForKeyedSubscript("decrypt")
         
         var encrypted = encryptFunction.callWithArguments([password, "thisisakey"])
-        println(encrypted)
-        //var decrypted = decryptFunction.callWithArguments([encrypted, "thisisakey"])
-        //println(decrypted)
+        var encryptedString = encrypted.toString()
+        println(encryptedString)
+        var decrypted = decryptFunction.callWithArguments([encrypted, "thisisakey"])
+        println(decrypted)
         
         // MARK: POST
         // Create new post
@@ -156,7 +164,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         var postsUrlRequest = NSMutableURLRequest(URL: NSURL(string: postsEndpoint)!)
         postsUrlRequest.HTTPMethod = "POST"
         
-        var newPost: NSDictionary = ["username": username, "password": password];
+        var newPost: NSDictionary = ["username": username, "password": encryptedString];
         var postJSONError: NSError?
         var jsonPost = NSJSONSerialization.dataWithJSONObject(newPost, options: nil, error:  &postJSONError)
         postsUrlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -176,11 +184,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         if (status == "fail") {
             
             println("login failed")
-            spinner.stopAnimating()
             return false
         }
         println("login success")
-        spinner.stopAnimating()
         return true
     }
     
