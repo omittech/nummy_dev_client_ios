@@ -52,9 +52,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signUpDone(sender: AnyObject) {
         
+        spinner.startAnimating()
+        
         if (Password.text == RePassword.text) {
-            
-            spinner.startAnimating()
             
             // MARK: POST
             // Create new post
@@ -80,7 +80,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             }*/
             println("The post is:" + data.description)
             
-            spinner.startAnimating()
+            spinner.stopAnimating()
             
             var alertView = UIAlertView();
             alertView.addButtonWithTitle("OK");
@@ -95,6 +95,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
         else {
         
+            spinner.stopAnimating()
+            
             //password and re-password are different
             var alertView = UIAlertView();
             alertView.addButtonWithTitle("OK");

@@ -24,7 +24,7 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
         phone.selected = !phone.selected;
         
         if (sender.selected == true) {
-            let image  = UIImage(named: "48.png")
+            let image  = UIImage(named: "emailSelected.png")
             sender.setImage(image, forState: UIControlState.Selected)
         }
 
@@ -36,7 +36,7 @@ class ForgetPasswordViewController: UIViewController, UITextFieldDelegate {
         email.selected = !email.selected;
         
         if (sender.selected == true) {
-            let image  = UIImage(named: "49.png")
+            let image  = UIImage(named: "textSelected.png")
             sender.setImage(image, forState: UIControlState.Selected)
         }
     
