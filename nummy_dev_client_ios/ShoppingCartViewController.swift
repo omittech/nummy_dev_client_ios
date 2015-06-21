@@ -43,6 +43,15 @@ class ShoppingCartViewController : UIViewController, UITableViewDataSource, UITa
     
     var cellsForDisplay:[FlattenCell] = [FlattenCell]()
     
+    @IBAction func goToLastPage(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var lastBoard = defaults.objectForKey(lastStoryBoard) as! String
+        var lastController = defaults.objectForKey(lastViewController) as! String
+        
+        var storyboard = UIStoryboard(name: lastBoard, bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier(lastController) as! UIViewController
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

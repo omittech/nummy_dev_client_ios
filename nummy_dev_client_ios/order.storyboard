@@ -107,10 +107,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="67" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IIh-5Z-e0b">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.76389353090000001" green="0.76389353090000001" blue="0.76389353090000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartRestaurantCell" rowHeight="80" id="uE3-ja-nVu" customClass="CartRestaurantCell" customModule="nummy_dev_client_ios" customModuleProvider="target">
+                                    <tableViewCell alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartRestaurantCell" rowHeight="80" id="uE3-ja-nVu" customClass="CartRestaurantCell" customModule="nummy_dev_client_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uE3-ja-nVu" id="NJl-wO-Fx0">
@@ -151,7 +150,7 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.76389353090000001" green="0.76389353090000001" blue="0.76389353090000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="address" destination="e5V-ct-hii" id="5bS-XT-jRv"/>
                                             <outlet property="restaurantName" destination="5D9-O8-wzP" id="UVq-j9-vKz"/>
@@ -189,7 +188,7 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.13" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.76389353090000001" green="0.76389353090000001" blue="0.76389353090000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="name" destination="f2f-xc-Imh" id="Iby-qn-SJo"/>
                                             <outlet property="price" destination="35K-V1-vLk" id="r6S-yG-YlA"/>
@@ -253,7 +252,7 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.76389353089720735" green="0.76389353089720735" blue="0.76389353089720735" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="tax" destination="d0S-06-xRK" id="xA7-ep-EnX"/>
                                             <outlet property="total" destination="9Zc-tH-mcz" id="nVQ-ix-ikM"/>
@@ -279,12 +278,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Shopping Cart" id="CM4-eX-fQO">
-                                        <barButtonItem key="leftBarButtonItem" image="menu_orange_52px.png" id="Mwx-JM-ORa">
+                                        <barButtonItem key="leftBarButtonItem" image="backButton.png" id="Mwx-JM-ORa">
                                             <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="cart.png" id="5Gu-4x-2u9">
-                                            <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="goToLastPage:" destination="J2Y-O6-Qp7" id="Q0z-CY-Xmo"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -320,7 +319,6 @@
         <image name="cart.png" width="37" height="34"/>
         <image name="chefPic.png" width="120" height="120"/>
         <image name="location_filled_orange_52px.png" width="52" height="52"/>
-        <image name="menu_orange_52px.png" width="52" height="52"/>
         <image name="orderSeperator.png" width="938" height="4"/>
         <image name="rightArrow.png" width="41" height="54"/>
     </resources>

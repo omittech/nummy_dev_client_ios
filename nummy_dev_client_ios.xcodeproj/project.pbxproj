@@ -19,6 +19,7 @@
 		5E373FEA1B32446200F5F9B7 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E373FE91B32446200F5F9B7 /* account.png */; };
 		5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE171B27DAB700347045 /* ItemVO.swift */; };
 		5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */; };
+		5E45CA011B365C70009217FB /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45CA001B365C70009217FB /* GlobalVariables.swift */; };
 		5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4FBF911B268B06001340D3 /* ChefListViewController.swift */; };
 		5E9DFEEE1B324BB600B474F2 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */; };
 		5E9DFEF11B32549600B474F2 /* CartRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */; };
@@ -130,6 +131,7 @@
 		5E373FE91B32446200F5F9B7 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
 		5E38EE171B27DAB700347045 /* ItemVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemVO.swift; path = VO/ItemVO.swift; sourceTree = "<group>"; };
 		5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chefPicCell.swift; sourceTree = "<group>"; };
+		5E45CA001B365C70009217FB /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		5E4FBF911B268B06001340D3 /* ChefListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListViewController.swift; sourceTree = "<group>"; };
 		5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartRestaurantCell.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				5EC1401E1B2681A7002341A6 /* ChefVO.swift */,
 				5E38EE171B27DAB700347045 /* ItemVO.swift */,
 				5E9DFEFE1B33AC8900B474F2 /* ShoppingCartVO.swift */,
+				5E45CA001B365C70009217FB /* GlobalVariables.swift */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */,
 				5E373FD21B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift in Sources */,
 				5E9DFEEE1B324BB600B474F2 /* ShoppingCartViewController.swift in Sources */,
+				5E45CA011B365C70009217FB /* GlobalVariables.swift in Sources */,
 				5E9DFEF51B326D4600B474F2 /* CartItemCell.swift in Sources */,
 				5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */,
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,

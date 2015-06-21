@@ -193,7 +193,7 @@
         <!--Chef Detail View Controller-->
         <scene sceneID="g8E-uo-ZrK">
             <objects>
-                <viewController id="tnx-He-eZi" customClass="ChefDetailViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chefDetail" id="tnx-He-eZi" customClass="ChefDetailViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q3s-nQ-aQ8"/>
                         <viewControllerLayoutGuide type="bottom" id="J8A-EZ-sMF"/>
@@ -406,7 +406,7 @@
         <!--Chef Intro View Controller-->
         <scene sceneID="UBG-1H-bEh">
             <objects>
-                <viewController id="UMi-9N-7ro" customClass="ChefIntroViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chefIntro" id="UMi-9N-7ro" customClass="ChefIntroViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aYu-zk-iws"/>
                         <viewControllerLayoutGuide type="bottom" id="T72-Ad-Cjb"/>

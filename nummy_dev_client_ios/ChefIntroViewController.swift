@@ -13,19 +13,20 @@ class ChefIntroViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var chefIntroTitile: UINavigationItem!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    var chefVO: ChefVO!
-    var itemsList: [ItemVO] = [ItemVO]()
-    
     // show shopping cart page when clicked
     @IBAction func goToCart(sender: AnyObject) {
         var storyboard = UIStoryboard(name: "order", bundle: nil)
         var controller = storyboard.instantiateViewControllerWithIdentifier("shoppingCart") as! UIViewController
         self.presentViewController(controller, animated: true, completion: nil)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("chefs", forKey: lastStoryBoard)
+        defaults.setObject("chefIntro", forKey: lastViewController)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.chefIntroTitile.title = chefVO.name as? String
+        self.chefIntroTitile.title = selectedChef.name as? String
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,16 +37,16 @@ class ChefIntroViewController: UIViewController, UICollectionViewDelegate, UICol
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         if(indexPath.row == 0) {
             var cell: chefPicCell = collectionView.dequeueReusableCellWithReuseIdentifier("chefPicCell", forIndexPath: indexPath) as! chefPicCell
-            cell.chefBackground.image = chefVO.images["background"]
+            cell.chefBackground.image = selectedChef.images["background"]
             return cell
         } else if(indexPath.row == 1) {
             var cell: chefIntroductionCell = collectionView.dequeueReusableCellWithReuseIdentifier("chefProfileCell", forIndexPath: indexPath) as! chefIntroductionCell
             
             // set the height of the cell to recalculate size
-            cell.chefIntroduction.text = chefVO.description as? String
+            cell.chefIntroduction.text = selectedChef.description as? String
             cell.chefIntroduction.sizeToFit()
-            cell.chefName.text = chefVO.name as? String
-            cell.chefAddr.text = (chefVO.city as! String) + ", " + (chefVO.province as! String)
+            cell.chefName.text = selectedChef.name as? String
+            cell.chefAddr.text = (selectedChef.city as! String) + ", " + (selectedChef.province as! String)
             collectionView.collectionViewLayout.invalidateLayout()
             return cell
         } else if(indexPath.row == 2) {
@@ -53,10 +54,10 @@ class ChefIntroViewController: UIViewController, UICollectionViewDelegate, UICol
             return cell
         } else {
             var cell: ingrdientCell = collectionView.dequeueReusableCellWithReuseIdentifier("ingrdientCell", forIndexPath: indexPath) as! ingrdientCell
-            cell.ingrdientDetailLabel.text = itemsList[indexPath.row - 3].description
+            cell.ingrdientDetailLabel.text = selectChefItems[indexPath.row - 3].description
             cell.ingrdientDetailLabel.sizeToFit()
-            cell.ingrdientNameLabel.text = itemsList[indexPath.row - 3].name
-            cell.ingrdientPrice.text = "$"+itemsList[indexPath.row - 3].price.stringValue
+            cell.ingrdientNameLabel.text = selectChefItems[indexPath.row - 3].name
+            cell.ingrdientPrice.text = "$"+selectChefItems[indexPath.row - 3].price.stringValue
             collectionView.collectionViewLayout.invalidateLayout()
             return cell
         }
@@ -66,7 +67,7 @@ class ChefIntroViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return itemsList.count + 3
+        return selectChefItems.count + 3
     }
     
     func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
@@ -97,17 +98,7 @@ class ChefIntroViewController: UIViewController, UICollectionViewDelegate, UICol
             }
             
         }
-        
-        
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "backToChefDetail" {
-            let chefDetailView = segue.destinationViewController as! ChefDetailViewController
-            chefDetailView.chefVO = chefVO
-        }
-    }
-    
 
 }
 
