@@ -9,8 +9,6 @@
 import UIKit
 
 class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    var chefVO: ChefVO!
-    var itemsList: [ItemVO] = [ItemVO]()
     var numOfCell = 0
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -21,14 +19,70 @@ class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var chefTitle: UINavigationItem!
     
+    // show shopping cart page when clicked
+    @IBAction func goToCart(sender: AnyObject) {
+        var storyboard = UIStoryboard(name: "order", bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier("shoppingCart") as! UIViewController
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("chefs", forKey: lastStoryBoard)
+        defaults.setObject("chefDetail", forKey: lastViewController)
+    }
+
+    // Add the item to shopping cart when click
+    @IBAction func addToCart(sender: AnyObject) {
+        let button = sender as! UIButton
+        let view = button.superview!
+        let cell = view.superview as! foodItemCell
+        let indexPath = collectionView.indexPathForCell(cell)!
+        let itemToAdd = selectChefItems[indexPath.row]
+        
+        // if restaurant haven't got any item in cart, add restaurant
+        if(!contains(shoppingCartVO.chefIds, itemToAdd.restaurantId)) {
+            shoppingCartVO.chefIds.append(selectedChef.id as String)
+            shoppingCartVO.chefs[selectedChef.id as String] = selectedChef
+        }
+        
+        // if item haven't got any item in cart, add item
+        if(!contains(shoppingCartVO.itemIds, itemToAdd.id)) {
+            shoppingCartVO.itemIds.append(itemToAdd.id)
+            shoppingCartVO.items[itemToAdd.id] = itemToAdd
+        }
+        shoppingCartVO.items[itemToAdd.id]?.quantity++
+        
+        var cgframe = CGRectMake(200, -100, 50, 50)
+        if(cell.subviews.count < 2) {
+            var newimage = UIImageView(frame: cell.itemImage.frame)
+            newimage.image = cell.itemImage.image
+            cell.addSubview(newimage)
+            
+            UIView.animateKeyframesWithDuration(0.7, delay: 0, options: .CalculationModeCubic, animations: {
+                UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.5, animations: {
+                    newimage.frame = cgframe
+                })
+                
+                }, completion: nil)
+        } else {
+            var newimage = cell.subviews[1] as! UIImageView
+            newimage.frame = cell.itemImage.frame
+            UIView.animateKeyframesWithDuration(0.7, delay: 0, options: .CalculationModeCubic, animations: {
+                UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.5, animations: {
+                    newimage.frame = cgframe
+                })
+                
+                }, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        chefTitle.title = chefVO.name as String
-        chefPicture.image = chefVO.images["chef"]
-        chefName.text = chefVO.name as String
-        chefAddress.text = chefVO.address as String
-        chefDistance.text = chefVO.distance.stringValue + " km"
+        chefTitle.title = selectedChef.name as String
+        chefPicture.image = selectedChef.images["chef"]
+        chefName.text = selectedChef.name as String
+        chefAddress.text = selectedChef.address as String
+        chefDistance.text = selectedChef.distance.stringValue + " km"
         
         spinner.startAnimating()
     }
@@ -45,7 +99,7 @@ class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func getItems() {
-        var apiEndpoint = baseUrl + "/api/item/restaurant/" + (chefVO.id as String)
+        var apiEndpoint = baseUrl + "/api/item/restaurant/" + (selectedChef.id as String)
         var urlRequest = NSMutableURLRequest(URL: NSURL(string: apiEndpoint)!)
         
         var getChefError: NSError?
@@ -55,11 +109,13 @@ class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UI
         let parsedData = NSJSONSerialization.JSONObjectWithData(responseData, options: nil, error: &parseError) as! NSDictionary
         
         var items = parsedData.valueForKey("data") as! NSArray
+        selectChefItems.removeAll(keepCapacity: false)
         for item in items {
             var itemVO = ItemVO(dictionary: item as! NSDictionary)
-            itemsList.append(itemVO)
+            selectChefItems.append(itemVO)
+
         }
-        numOfCell = itemsList.count
+        numOfCell = selectChefItems.count
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -68,7 +124,7 @@ class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell: foodItemCell = collectionView.dequeueReusableCellWithReuseIdentifier("chefItemCell", forIndexPath: indexPath) as! foodItemCell
-        var item = itemsList[indexPath.row]
+        var item = selectChefItems[indexPath.row]
         cell.itemName.text = item.name
         cell.itemPrice.text = "$"+item.price.stringValue
         cell.itemImage.image = item.image
@@ -89,12 +145,12 @@ class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     // Pass the select chef infomation to next view
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showChefIntroduction" {
-            let chefIntroductionView = segue.destinationViewController as! ChefIntroViewController
-            chefIntroductionView.chefVO = chefVO
-            chefIntroductionView.itemsList = itemsList
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "showChefIntroduction" {
+//            let chefIntroductionView = segue.destinationViewController as! ChefIntroViewController
+////            chefIntroductionView.chefVO = selectedChef
+//            chefIntroductionView.itemsList = selectChefItems
+//        }
+//    }
 }
 

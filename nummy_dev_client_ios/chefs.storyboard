@@ -34,6 +34,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="cart.png" id="goK-SM-Wfu">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="goToCart:" destination="fa3-zq-ROP" id="2Kt-iH-G8Q"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -190,7 +193,7 @@
         <!--Chef Detail View Controller-->
         <scene sceneID="g8E-uo-ZrK">
             <objects>
-                <viewController id="tnx-He-eZi" customClass="ChefDetailViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chefDetail" id="tnx-He-eZi" customClass="ChefDetailViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q3s-nQ-aQ8"/>
                         <viewControllerLayoutGuide type="bottom" id="J8A-EZ-sMF"/>
@@ -215,6 +218,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="cart.png" id="u6i-jZ-BVu">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="goToCart:" destination="tnx-He-eZi" id="BwM-aY-geA"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -290,6 +296,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJv-oN-qos">
                                                     <rect key="frame" x="137" y="8" width="32" height="32"/>
                                                     <state key="normal" image="plus.png"/>
+                                                    <connections>
+                                                        <action selector="addToCart:" destination="tnx-He-eZi" eventType="touchUpInside" id="kbP-4d-PcK"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -397,7 +406,7 @@
         <!--Chef Intro View Controller-->
         <scene sceneID="UBG-1H-bEh">
             <objects>
-                <viewController id="UMi-9N-7ro" customClass="ChefIntroViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chefIntro" id="UMi-9N-7ro" customClass="ChefIntroViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aYu-zk-iws"/>
                         <viewControllerLayoutGuide type="bottom" id="T72-Ad-Cjb"/>
@@ -421,6 +430,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" image="cart.png" id="JD0-sO-sbt">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="goToCart:" destination="UMi-9N-7ro" id="zOJ-wB-Fao"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -714,6 +726,6 @@
         <image name="whiteBackground.png" width="266" height="276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M4n-ua-bFv"/>
+        <segue reference="wvy-iH-QT2"/>
     </inferredMetricsTieBreakers>
 </document>

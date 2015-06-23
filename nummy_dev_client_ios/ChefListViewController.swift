@@ -14,6 +14,8 @@ import CoreLocation
 let baseUrl = "http://frozen-island-6927.herokuapp.com"
 let userCoordinateLatitude = "userCoordinateLatitude"
 let userCoordinateLongitude = "userCoordinateLongitude"
+let lastStoryBoard = "lastStoryBoard"
+let lastViewController = "lastViewController"
 
 class ChefListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate, ENSideMenuDelegate{
     // record the number of cells in collection view(not including
@@ -30,6 +32,17 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
         toggleSideMenuView()
     }
     
+    // show shopping cart page when clicked
+    @IBAction func goToCart(sender: AnyObject) {
+        var storyboard = UIStoryboard(name: "order", bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier("shoppingCart") as! UIViewController
+        self.presentViewController(controller, animated: true, completion: nil)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("chefs", forKey: lastStoryBoard)
+        defaults.setObject("chefList", forKey: lastViewController)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +56,9 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        // re-initialize the selected data
+        selectChefItems = [ItemVO]()
         
         spinner.startAnimating()
     }
@@ -137,7 +153,8 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
         if segue.identifier == "showChefDetail" {
             var indexPath: NSIndexPath = self.collectionView!.indexPathForCell(sender as! UICollectionViewCell)!
             let chefDetailView = segue.destinationViewController as! ChefDetailViewController
-            chefDetailView.chefVO = chefsList[indexPath.row]
+            selectedChef = chefsList[indexPath.row]
+//            chefDetailView.chefVO = chefsList[indexPath.row]
             hideSideMenuView()
         }
     }
