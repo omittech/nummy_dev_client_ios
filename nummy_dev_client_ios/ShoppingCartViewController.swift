@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-var shoppingCartVO = ShoppingCartVO()
+
 
 // Use this cell to record data for each table view cell
 // It holds data for restaurant, item and price
@@ -23,6 +23,7 @@ struct FlattenCell {
     
     var type: FlattenCellType?
     // data for restaurant
+    var restaurantId: String?
     var restaurantPicture: UIImage?
     var restaurantName: String?
     var address: String?
@@ -60,6 +61,7 @@ class ShoppingCartViewController : UIViewController, UITableViewDataSource, UITa
             var chef = shoppingCartVO.chefs[chefId]!
             var chefCell = FlattenCell()
             chefCell.type = FlattenCellType.CHEF
+            chefCell.restaurantId = chefId
             chefCell.restaurantPicture = chef.images["chef"]
             chefCell.restaurantName = chef.name as String
             chefCell.address = chef.address as String
@@ -68,14 +70,17 @@ class ShoppingCartViewController : UIViewController, UITableViewDataSource, UITa
             var totalCharge = 0.0
             for itemId in shoppingCartVO.itemIds {
                 var item = shoppingCartVO.items[itemId]!
-                var itemCell = FlattenCell()
-                itemCell.type = FlattenCellType.ITEM
-                itemCell.name = item.name
-                itemCell.price = Double(item.price)
-                itemCell.quantity = item.quantity
-                totalCharge = totalCharge + Double(item.price)
-                
-                cellsForDisplay.append(itemCell)
+                // only attach items belong to the restaurant to this restaurant
+                if(item.restaurantId == chefId) {
+                    var itemCell = FlattenCell()
+                    itemCell.type = FlattenCellType.ITEM
+                    itemCell.name = item.name
+                    itemCell.price = Double(item.price)
+                    itemCell.quantity = item.quantity
+                    totalCharge = totalCharge + Double(item.price)
+                    
+                    cellsForDisplay.append(itemCell)
+                }
             }
             
             var priceCell = FlattenCell()
@@ -96,6 +101,8 @@ class ShoppingCartViewController : UIViewController, UITableViewDataSource, UITa
             cell.restaurantPicture.image = flattenCell.restaurantPicture
             cell.restaurantName.text = flattenCell.restaurantName
             cell.address.text = flattenCell.address
+            cell.restaurantId = flattenCell.restaurantId!
+            
             return cell
         } else if type == FlattenCellType.ITEM {
             var cell = restaurantList.dequeueReusableCellWithIdentifier("cartItemCell") as! CartItemCell
@@ -123,5 +130,14 @@ class ShoppingCartViewController : UIViewController, UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellsForDisplay.count
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showReview" {
+            var senderCell = sender as! CartRestaurantCell
+            var indexPath: NSIndexPath = self.restaurantList.indexPathForCell(senderCell)!
+            let reviewView = segue.destinationViewController as! ReviewPageViewController
+            reviewView.chefId = senderCell.restaurantId
+        }
     }
 }

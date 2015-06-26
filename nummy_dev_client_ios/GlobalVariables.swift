@@ -10,8 +10,15 @@ import Foundation
 import UIKit
 
 // should avoid using these variables
+var shoppingCartVO = ShoppingCartVO()
 var selectedChef: ChefVO!
 var selectChefItems: [ItemVO] = [ItemVO]()
 //struct GlobalVariables{
 //    static var selectedChef: ChefVO! = ChefVO(dictionary: NSDictionary())
 //}
+
+extension Double {
+    func format(f: String) -> String {
+        return NSString(format: "%\(f)f", self) as String
+    }
+}

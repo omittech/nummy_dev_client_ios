@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 // base url for API calls
-let baseUrl = "http://frozen-island-6927.herokuapp.com"
+let baseUrl = "http://dry-mountain-2007.herokuapp.com"
 let userCoordinateLatitude = "userCoordinateLatitude"
 let userCoordinateLongitude = "userCoordinateLongitude"
 let lastStoryBoard = "lastStoryBoard"
