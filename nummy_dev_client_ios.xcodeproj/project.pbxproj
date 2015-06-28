@@ -100,11 +100,16 @@
 		CA5AEC001B20AB7100F3CC21 /* 23.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBFF1B20AB7100F3CC21 /* 23.png */; };
 		CA5AEC021B20B08E00F3CC21 /* 24.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEC011B20B08E00F3CC21 /* 24.png */; };
 		CA5AEC041B20B10E00F3CC21 /* 31.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEC031B20B10E00F3CC21 /* 31.png */; };
+		CA60DEF11B3A4158000EA8B3 /* OrderVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60DEF01B3A4158000EA8B3 /* OrderVO.swift */; };
+		CA60DEF31B3B2A8C000EA8B3 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60DEF21B3B2A8C000EA8B3 /* OrderCell.swift */; };
+		CA60DEF51B3B9183000EA8B3 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60DEF41B3B9183000EA8B3 /* UserVO.swift */; };
+		CA60DEF71B3CF996000EA8B3 /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA60DEF61B3CF996000EA8B3 /* 123.jpg */; };
+		CA60DEF91B3D1A05000EA8B3 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA60DEF81B3D1A05000EA8B3 /* OrderDetailViewController.swift */; };
 		CAD2D7B11AEB3954006BA377 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD2D7B01AEB3954006BA377 /* ForgetPasswordViewController.swift */; };
 		CAD2D7C31AF1ACA3006BA377 /* TermAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD2D7C21AF1ACA3006BA377 /* TermAndConditionsViewController.swift */; };
 		CAD2D8001B02CFB9006BA377 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD2D7FF1B02CFB9006BA377 /* SignUpViewController.swift */; };
 		CAE5444E1B339F8E007674E0 /* summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE5444D1B339F8E007674E0 /* summary.storyboard */; };
-		CAE544501B339FB6007674E0 /* summaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5444F1B339FB6007674E0 /* summaryController.swift */; };
+		CAE544501B339FB6007674E0 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE5444F1B339FB6007674E0 /* SummaryViewController.swift */; };
 		CAE544521B33A9DB007674E0 /* forward_filled_52px.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE544511B33A9DB007674E0 /* forward_filled_52px.png */; };
 /* End PBXBuildFile section */
 
@@ -216,12 +221,17 @@
 		CA5AEBFF1B20AB7100F3CC21 /* 23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 23.png; sourceTree = "<group>"; };
 		CA5AEC011B20B08E00F3CC21 /* 24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 24.png; sourceTree = "<group>"; };
 		CA5AEC031B20B10E00F3CC21 /* 31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 31.png; sourceTree = "<group>"; };
+		CA60DEF01B3A4158000EA8B3 /* OrderVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderVO.swift; sourceTree = "<group>"; };
+		CA60DEF21B3B2A8C000EA8B3 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		CA60DEF41B3B9183000EA8B3 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
+		CA60DEF61B3CF996000EA8B3 /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123.jpg; sourceTree = "<group>"; };
+		CA60DEF81B3D1A05000EA8B3 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		CA6AE17D1B115A28001FDAEF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		CAD2D7B01AEB3954006BA377 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		CAD2D7C21AF1ACA3006BA377 /* TermAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermAndConditionsViewController.swift; sourceTree = "<group>"; };
 		CAD2D7FF1B02CFB9006BA377 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CAE5444D1B339F8E007674E0 /* summary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = summary.storyboard; sourceTree = "<group>"; };
-		CAE5444F1B339FB6007674E0 /* summaryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = summaryController.swift; sourceTree = "<group>"; };
+		CAE5444F1B339FB6007674E0 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		CAE544511B33A9DB007674E0 /* forward_filled_52px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward_filled_52px.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,6 +294,8 @@
 				5E38EE171B27DAB700347045 /* ItemVO.swift */,
 				5E9DFEFE1B33AC8900B474F2 /* ShoppingCartVO.swift */,
 				5E45CA001B365C70009217FB /* GlobalVariables.swift */,
+				CA60DEF01B3A4158000EA8B3 /* OrderVO.swift */,
+				CA60DEF41B3B9183000EA8B3 /* UserVO.swift */,
 			);
 			name = VO;
 			sourceTree = "<group>";
@@ -383,7 +395,7 @@
 		5ED2058E1AE5CF7000CF2426 /* loginModule */ = {
 			isa = PBXGroup;
 			children = (
-				CAD2D7B31AEB4647006BA377 /* icons */,
+				CAD2D7B31AEB4647006BA377 /* Icons */,
 				CAD2D7B21AEB45DF006BA377 /* Buttons */,
 				CAD2D7A51AEAD28B006BA377 /* Images */,
 				5ED205911AE5D00300CF2426 /* login.storyboard */,
@@ -474,6 +486,7 @@
 		CAD2D7A51AEAD28B006BA377 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CA60DEF61B3CF996000EA8B3 /* 123.jpg */,
 				CA5AEBE01B1F8D0500F3CC21 /* emailSelected.png */,
 				CA5AEBE11B1F8D0500F3CC21 /* textSelected.png */,
 				CA5AEBDE1B1F76BF00F3CC21 /* loginbg.png */,
@@ -503,14 +516,14 @@
 			name = Buttons;
 			sourceTree = "<group>";
 		};
-		CAD2D7B31AEB4647006BA377 /* icons */ = {
+		CAD2D7B31AEB4647006BA377 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
 				CA5AEBCE1B1F746C00F3CC21 /* arrow_orange_52px.png */,
 				CA5AEBCC1B1F745500F3CC21 /* back_arrow.png */,
 				CA5AEBCA1B1F744200F3CC21 /* cart_button.png */,
 			);
-			name = icons;
+			name = Icons;
 			sourceTree = "<group>";
 		};
 		CAD2D7F11B02A0EB006BA377 /* Frameworks */ = {
@@ -527,7 +540,9 @@
 			isa = PBXGroup;
 			children = (
 				CAE5444D1B339F8E007674E0 /* summary.storyboard */,
-				CAE5444F1B339FB6007674E0 /* summaryController.swift */,
+				CAE5444F1B339FB6007674E0 /* SummaryViewController.swift */,
+				CA60DEF21B3B2A8C000EA8B3 /* OrderCell.swift */,
+				CA60DEF81B3D1A05000EA8B3 /* OrderDetailViewController.swift */,
 			);
 			name = summaryModule;
 			sourceTree = "<group>";
@@ -676,6 +691,7 @@
 				CA5AEBCD1B1F745500F3CC21 /* back_arrow.png in Resources */,
 				5ED2EE351B2011BD00D7B244 /* findRestaurant.png in Resources */,
 				5ED2EE371B2011BD00D7B244 /* heart_empty_orange_52px.png in Resources */,
+				CA60DEF71B3CF996000EA8B3 /* 123.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA60DEF31B3B2A8C000EA8B3 /* OrderCell.swift in Sources */,
 				5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */,
 				5EC1401F1B2681A7002341A6 /* ChefVO.swift in Sources */,
 				5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */,
@@ -702,10 +719,12 @@
 				5E9DFEF51B326D4600B474F2 /* CartItemCell.swift in Sources */,
 				5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */,
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,
+				CA60DEF11B3A4158000EA8B3 /* OrderVO.swift in Sources */,
 				CAD2D8001B02CFB9006BA377 /* SignUpViewController.swift in Sources */,
 				CA5AEBFD1B20A98E00F3CC21 /* thankYouViewController.swift in Sources */,
 				5E373FD41B2FC1C800F5F9B7 /* ChefListNavigationView.swift in Sources */,
 				5ED205941AE5D03C00CF2426 /* LoginViewController.swift in Sources */,
+				CA60DEF51B3B9183000EA8B3 /* UserVO.swift in Sources */,
 				CA5AEBF91B20A89100F3CC21 /* orderReviewViewController.swift in Sources */,
 				5ED2056F1AE5CE9400CF2426 /* ViewController.swift in Sources */,
 				5ED2EE511B20126800D7B244 /* foodItemCell.swift in Sources */,
@@ -718,9 +737,10 @@
 				5E9DFEFF1B33AC8900B474F2 /* ShoppingCartVO.swift in Sources */,
 				5ED2EE521B20126800D7B244 /* ingrdientCell.swift in Sources */,
 				CAD2D7B11AEB3954006BA377 /* ForgetPasswordViewController.swift in Sources */,
+				CA60DEF91B3D1A05000EA8B3 /* OrderDetailViewController.swift in Sources */,
 				5ED2EE481B20125100D7B244 /* chefIntroductionCell.swift in Sources */,
 				5ED2056D1AE5CE9400CF2426 /* AppDelegate.swift in Sources */,
-				CAE544501B339FB6007674E0 /* summaryController.swift in Sources */,
+				CAE544501B339FB6007674E0 /* SummaryViewController.swift in Sources */,
 				5ED2EE491B20125100D7B244 /* ChefIntroViewController.swift in Sources */,
 				5ED2EE471B20125100D7B244 /* ChefDetailViewController.swift in Sources */,
 				5E373FDA1B310B6F00F5F9B7 /* SideMenuCell.swift in Sources */,

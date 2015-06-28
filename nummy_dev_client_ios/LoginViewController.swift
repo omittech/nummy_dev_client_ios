@@ -85,13 +85,14 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
             //if login success, then segue to next page
             
             spinner.stopAnimating()
-            
+            println("spinner end")
             performSegueWithIdentifier("loginSuccessSegue", sender: self)
         }
         else {
             //if login failed, pop-up a alert
             
             spinner.stopAnimating()
+            println("spinner end")
             
             var alertView = UIAlertView();
             alertView.addButtonWithTitle("OK");
@@ -109,6 +110,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     }
     
     override func viewDidAppear(animated: Bool) {
+        
         spinner.stopAnimating()
         
         if (FBSDKAccessToken.currentAccessToken() != nil)
@@ -138,7 +140,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     }
     
     func loginCheck(Username username: String, Password password: String)->Bool {
-        
+        println("spinner start")
         spinner.startAnimating()
         
         // get the project path of aes.js
@@ -160,7 +162,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         
         // MARK: POST
         // Create new post
-        var postsEndpoint: String = "http://frozen-island-6927.herokuapp.com/api/login"
+        var postsEndpoint: String = baseUrl + "/api/login"
         var postsUrlRequest = NSMutableURLRequest(URL: NSURL(string: postsEndpoint)!)
         postsUrlRequest.HTTPMethod = "POST"
         

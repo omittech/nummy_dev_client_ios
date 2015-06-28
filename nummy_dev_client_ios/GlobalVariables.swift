@@ -15,3 +15,9 @@ var selectChefItems: [ItemVO] = [ItemVO]()
 //struct GlobalVariables{
 //    static var selectedChef: ChefVO! = ChefVO(dictionary: NSDictionary())
 //}
+
+let baseUrl = "http://dry-mountain-2007.herokuapp.com"
+let userCoordinateLatitude = "userCoordinateLatitude"
+let userCoordinateLongitude = "userCoordinateLongitude"
+let lastStoryBoard = "lastStoryBoard"
+let lastViewController = "lastViewController"
