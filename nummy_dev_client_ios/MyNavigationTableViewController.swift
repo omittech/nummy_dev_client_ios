@@ -147,11 +147,16 @@ class MyNavigationTableViewController: UITableViewController {
         case 2:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController3")as! UIViewController
             break
+        case 4:
+            let loginStoryboard: UIStoryboard = UIStoryboard(name: "login",bundle: nil)
+            destViewController = loginStoryboard.instantiateViewControllerWithIdentifier("myAccount") as! UIViewController
+            break
         default:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController4") as! UIViewController
             break
         }
-        sideMenuController()?.setContentViewController(destViewController)
+
+        testVC!.presentViewController(destViewController, animated: true, completion: nil)
     }
     
     

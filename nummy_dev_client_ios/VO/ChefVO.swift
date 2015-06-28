@@ -20,6 +20,7 @@ struct ChefVO  {
     var description: NSString = ""
     var updateDate: NSString = ""
     var createDate: NSString = ""
+    var phone: String = ""
     var distance: NSNumber = 0
     var isActive: Bool = true
     var isPublic: Bool = true
@@ -40,6 +41,7 @@ struct ChefVO  {
         self.isActive = dictionary.valueForKey("isActive") as! Bool
         self.isPublic = dictionary.valueForKey("isPublic") as! Bool
         self.distance = dictionary.valueForKey("distanceTouser") as! NSNumber
+        self.phone = dictionary.valueForKey("phone") as! String
         //        self.location = dictionary.valueForKey("_id") as! [Double]
         var imagePaths = dictionary.valueForKey("images") as! [String]
         

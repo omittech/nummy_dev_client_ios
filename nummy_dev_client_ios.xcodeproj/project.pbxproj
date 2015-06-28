@@ -20,6 +20,11 @@
 		5E38EE181B27DAB700347045 /* ItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE171B27DAB700347045 /* ItemVO.swift */; };
 		5E38EE1B1B27EB6E00347045 /* chefPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */; };
 		5E45CA011B365C70009217FB /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45CA001B365C70009217FB /* GlobalVariables.swift */; };
+		5E45CA031B3893AA009217FB /* reviewSeperator.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E45CA021B3893AA009217FB /* reviewSeperator.png */; };
+		5E45CA051B389E4A009217FB /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45CA041B389E4A009217FB /* ReviewPageViewController.swift */; };
+		5E45CA071B38F554009217FB /* ReviewDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45CA061B38F554009217FB /* ReviewDetailCell.swift */; };
+		5E45CA0B1B3A1B1E009217FB /* dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E45CA0A1B3A1B1E009217FB /* dropdown.png */; };
+		5E45CA0D1B3E3302009217FB /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45CA0C1B3E3302009217FB /* MyAccountViewController.swift */; };
 		5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4FBF911B268B06001340D3 /* ChefListViewController.swift */; };
 		5E9DFEEE1B324BB600B474F2 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */; };
 		5E9DFEF11B32549600B474F2 /* CartRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */; };
@@ -137,6 +142,11 @@
 		5E38EE171B27DAB700347045 /* ItemVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemVO.swift; path = VO/ItemVO.swift; sourceTree = "<group>"; };
 		5E38EE1A1B27EB6E00347045 /* chefPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chefPicCell.swift; sourceTree = "<group>"; };
 		5E45CA001B365C70009217FB /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		5E45CA021B3893AA009217FB /* reviewSeperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reviewSeperator.png; sourceTree = "<group>"; };
+		5E45CA041B389E4A009217FB /* ReviewPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
+		5E45CA061B38F554009217FB /* ReviewDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewDetailCell.swift; sourceTree = "<group>"; };
+		5E45CA0A1B3A1B1E009217FB /* dropdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown.png; sourceTree = "<group>"; };
+		5E45CA0C1B3E3302009217FB /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		5E4FBF911B268B06001340D3 /* ChefListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListViewController.swift; sourceTree = "<group>"; };
 		5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartRestaurantCell.swift; sourceTree = "<group>"; };
@@ -280,9 +290,11 @@
 			isa = PBXGroup;
 			children = (
 				5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */,
+				5E45CA041B389E4A009217FB /* ReviewPageViewController.swift */,
 				5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */,
 				5E9DFEF41B326D4600B474F2 /* CartItemCell.swift */,
 				5E9DFEF81B3274AD00B474F2 /* CartPriceCell.swift */,
+				5E45CA061B38F554009217FB /* ReviewDetailCell.swift */,
 			);
 			name = ShoppingCart;
 			sourceTree = "<group>";
@@ -400,6 +412,7 @@
 				CAD2D7A51AEAD28B006BA377 /* Images */,
 				5ED205911AE5D00300CF2426 /* login.storyboard */,
 				CAD2D7FF1B02CFB9006BA377 /* SignUpViewController.swift */,
+				5E45CA0C1B3E3302009217FB /* MyAccountViewController.swift */,
 				5ED205931AE5D03C00CF2426 /* LoginViewController.swift */,
 				CAD2D7B01AEB3954006BA377 /* ForgetPasswordViewController.swift */,
 				CAD2D7C21AF1ACA3006BA377 /* TermAndConditionsViewController.swift */,
@@ -473,6 +486,8 @@
 		CA5AEBFE1B20A9E900F3CC21 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5E45CA0A1B3A1B1E009217FB /* dropdown.png */,
+				5E45CA021B3893AA009217FB /* reviewSeperator.png */,
 				5E9DFEFC1B339BFA00B474F2 /* orderSeperator.png */,
 				5E9DFEF61B32710C00B474F2 /* cartItemPic.png */,
 				5E9DFEF21B326ACE00B474F2 /* rightArrow.png */,
@@ -629,6 +644,7 @@
 			files = (
 				5ED2EE341B2011BD00D7B244 /* FindChef.png in Resources */,
 				CA5AEBDF1B1F76BF00F3CC21 /* loginbg.png in Resources */,
+				5E45CA031B3893AA009217FB /* reviewSeperator.png in Resources */,
 				CA38F5261B2E875F000BF338 /* aes.js in Resources */,
 				5E9DFEF71B32710C00B474F2 /* cartItemPic.png in Resources */,
 				5ED2EE1E1B2011A700D7B244 /* ChefFullPic.png in Resources */,
@@ -666,6 +682,7 @@
 				CA5AEBD31B1F757400F3CC21 /* next_orange_text.png in Resources */,
 				5ED2EE3A1B2011BD00D7B244 /* lastScrollPage.png in Resources */,
 				5E373FE21B31120900F5F9B7 /* bigNummy.png in Resources */,
+				5E45CA0B1B3A1B1E009217FB /* dropdown.png in Resources */,
 				CAE5444E1B339F8E007674E0 /* summary.storyboard in Resources */,
 				CA5AEBD71B1F762300F3CC21 /* profile_picture.png in Resources */,
 				5ED205921AE5D00300CF2426 /* login.storyboard in Resources */,
@@ -717,6 +734,7 @@
 				5E9DFEEE1B324BB600B474F2 /* ShoppingCartViewController.swift in Sources */,
 				5E45CA011B365C70009217FB /* GlobalVariables.swift in Sources */,
 				5E9DFEF51B326D4600B474F2 /* CartItemCell.swift in Sources */,
+				5E45CA051B389E4A009217FB /* ReviewPageViewController.swift in Sources */,
 				5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */,
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,
 				CA60DEF11B3A4158000EA8B3 /* OrderVO.swift in Sources */,
@@ -735,6 +753,7 @@
 				5E9DFEF91B3274AD00B474F2 /* CartPriceCell.swift in Sources */,
 				CAD2D7C31AF1ACA3006BA377 /* TermAndConditionsViewController.swift in Sources */,
 				5E9DFEFF1B33AC8900B474F2 /* ShoppingCartVO.swift in Sources */,
+				5E45CA071B38F554009217FB /* ReviewDetailCell.swift in Sources */,
 				5ED2EE521B20126800D7B244 /* ingrdientCell.swift in Sources */,
 				CAD2D7B11AEB3954006BA377 /* ForgetPasswordViewController.swift in Sources */,
 				CA60DEF91B3D1A05000EA8B3 /* OrderDetailViewController.swift in Sources */,
@@ -743,6 +762,7 @@
 				CAE544501B339FB6007674E0 /* SummaryViewController.swift in Sources */,
 				5ED2EE491B20125100D7B244 /* ChefIntroViewController.swift in Sources */,
 				5ED2EE471B20125100D7B244 /* ChefDetailViewController.swift in Sources */,
+				5E45CA0D1B3E3302009217FB /* MyAccountViewController.swift in Sources */,
 				5E373FDA1B310B6F00F5F9B7 /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

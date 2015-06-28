@@ -39,6 +39,8 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        testVC = self
         self.sideMenuController()?.sideMenu?.delegate = self
 
         let chefListBackground: UIImageView = UIImageView(image: UIImage(named: "loginbg.png"))

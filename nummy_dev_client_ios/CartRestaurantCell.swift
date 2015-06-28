@@ -13,4 +13,5 @@ class CartRestaurantCell: UITableViewCell {
     @IBOutlet weak var restaurantPicture: UIImageView!
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var address: UILabel!
+    var restaurantId: String = ""
 }

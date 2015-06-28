@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 // should avoid using these variables
+var shoppingCartVO = ShoppingCartVO()
 var selectedChef: ChefVO!
 var selectChefItems: [ItemVO] = [ItemVO]()
 //struct GlobalVariables{
