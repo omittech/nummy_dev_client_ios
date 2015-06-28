@@ -24,6 +24,7 @@
 		5E45CA051B389E4A009217FB /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45CA041B389E4A009217FB /* ReviewPageViewController.swift */; };
 		5E45CA071B38F554009217FB /* ReviewDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45CA061B38F554009217FB /* ReviewDetailCell.swift */; };
 		5E45CA0B1B3A1B1E009217FB /* dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E45CA0A1B3A1B1E009217FB /* dropdown.png */; };
+		5E45CA0D1B3E3302009217FB /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E45CA0C1B3E3302009217FB /* MyAccountViewController.swift */; };
 		5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4FBF911B268B06001340D3 /* ChefListViewController.swift */; };
 		5E9DFEEE1B324BB600B474F2 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */; };
 		5E9DFEF11B32549600B474F2 /* CartRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */; };
@@ -140,6 +141,7 @@
 		5E45CA041B389E4A009217FB /* ReviewPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
 		5E45CA061B38F554009217FB /* ReviewDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewDetailCell.swift; sourceTree = "<group>"; };
 		5E45CA0A1B3A1B1E009217FB /* dropdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown.png; sourceTree = "<group>"; };
+		5E45CA0C1B3E3302009217FB /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		5E4FBF911B268B06001340D3 /* ChefListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListViewController.swift; sourceTree = "<group>"; };
 		5E9DFEED1B324BB600B474F2 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		5E9DFEF01B32549600B474F2 /* CartRestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartRestaurantCell.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 				CAD2D7A51AEAD28B006BA377 /* Images */,
 				5ED205911AE5D00300CF2426 /* login.storyboard */,
 				CAD2D7FF1B02CFB9006BA377 /* SignUpViewController.swift */,
+				5E45CA0C1B3E3302009217FB /* MyAccountViewController.swift */,
 				5ED205931AE5D03C00CF2426 /* LoginViewController.swift */,
 				CAD2D7B01AEB3954006BA377 /* ForgetPasswordViewController.swift */,
 				CAD2D7C21AF1ACA3006BA377 /* TermAndConditionsViewController.swift */,
@@ -739,6 +742,7 @@
 				CAE544501B339FB6007674E0 /* summaryController.swift in Sources */,
 				5ED2EE491B20125100D7B244 /* ChefIntroViewController.swift in Sources */,
 				5ED2EE471B20125100D7B244 /* ChefDetailViewController.swift in Sources */,
+				5E45CA0D1B3E3302009217FB /* MyAccountViewController.swift in Sources */,
 				5E373FDA1B310B6F00F5F9B7 /* SideMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

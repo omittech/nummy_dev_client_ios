@@ -17,6 +17,8 @@ let userCoordinateLongitude = "userCoordinateLongitude"
 let lastStoryBoard = "lastStoryBoard"
 let lastViewController = "lastViewController"
 
+var testVC:UIViewController?
+
 class ChefListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate, ENSideMenuDelegate{
     // record the number of cells in collection view(not including
     var numOfCell = 0
@@ -46,6 +48,8 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        testVC = self
         self.sideMenuController()?.sideMenu?.delegate = self
 
         let chefListBackground: UIImageView = UIImageView(image: UIImage(named: "loginbg.png"))
