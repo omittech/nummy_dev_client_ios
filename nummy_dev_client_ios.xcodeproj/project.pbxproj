@@ -74,6 +74,8 @@
 		5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2EE4C1B20126800D7B244 /* chefLocationCell.swift */; };
 		5ED2EE511B20126800D7B244 /* foodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2EE4D1B20126800D7B244 /* foodItemCell.swift */; };
 		5ED2EE521B20126800D7B244 /* ingrdientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2EE4E1B20126800D7B244 /* ingrdientCell.swift */; };
+		CA19F8AE1B407DD90064D35B /* OrderRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA19F8AD1B407DD90064D35B /* OrderRestaurantCell.swift */; };
+		CA19F8B01B4084320064D35B /* OrderItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA19F8AF1B4084320064D35B /* OrderItemCell.swift */; };
 		CA38F5261B2E875F000BF338 /* aes.js in Resources */ = {isa = PBXBuildFile; fileRef = CA38F5251B2E875F000BF338 /* aes.js */; };
 		CA5AEBBD1B1EAF0E00F3CC21 /* locationSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBBC1B1EAF0E00F3CC21 /* locationSelected.png */; };
 		CA5AEBBF1B1EAF3000F3CC21 /* edit_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBBE1B1EAF3000F3CC21 /* edit_button.png */; };
@@ -200,6 +202,8 @@
 		5ED2EE4C1B20126800D7B244 /* chefLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chefLocationCell.swift; sourceTree = "<group>"; };
 		5ED2EE4D1B20126800D7B244 /* foodItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodItemCell.swift; sourceTree = "<group>"; };
 		5ED2EE4E1B20126800D7B244 /* ingrdientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ingrdientCell.swift; sourceTree = "<group>"; };
+		CA19F8AD1B407DD90064D35B /* OrderRestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderRestaurantCell.swift; sourceTree = "<group>"; };
+		CA19F8AF1B4084320064D35B /* OrderItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItemCell.swift; sourceTree = "<group>"; };
 		CA38F5251B2E875F000BF338 /* aes.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = aes.js; sourceTree = "<group>"; };
 		CA5AEBBC1B1EAF0E00F3CC21 /* locationSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationSelected.png; sourceTree = "<group>"; };
 		CA5AEBBE1B1EAF3000F3CC21 /* edit_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_button.png; sourceTree = "<group>"; };
@@ -558,6 +562,8 @@
 				CAE5444F1B339FB6007674E0 /* SummaryViewController.swift */,
 				CA60DEF21B3B2A8C000EA8B3 /* OrderCell.swift */,
 				CA60DEF81B3D1A05000EA8B3 /* OrderDetailViewController.swift */,
+				CA19F8AD1B407DD90064D35B /* OrderRestaurantCell.swift */,
+				CA19F8AF1B4084320064D35B /* OrderItemCell.swift */,
 			);
 			name = summaryModule;
 			sourceTree = "<group>";
@@ -735,6 +741,7 @@
 				5E45CA011B365C70009217FB /* GlobalVariables.swift in Sources */,
 				5E9DFEF51B326D4600B474F2 /* CartItemCell.swift in Sources */,
 				5E45CA051B389E4A009217FB /* ReviewPageViewController.swift in Sources */,
+				CA19F8B01B4084320064D35B /* OrderItemCell.swift in Sources */,
 				5ED2EE501B20126800D7B244 /* chefLocationCell.swift in Sources */,
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,
 				CA60DEF11B3A4158000EA8B3 /* OrderVO.swift in Sources */,
@@ -751,6 +758,7 @@
 				5E9DFEF11B32549600B474F2 /* CartRestaurantCell.swift in Sources */,
 				5E373FD81B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift in Sources */,
 				5E9DFEF91B3274AD00B474F2 /* CartPriceCell.swift in Sources */,
+				CA19F8AE1B407DD90064D35B /* OrderRestaurantCell.swift in Sources */,
 				CAD2D7C31AF1ACA3006BA377 /* TermAndConditionsViewController.swift in Sources */,
 				5E9DFEFF1B33AC8900B474F2 /* ShoppingCartVO.swift in Sources */,
 				5E45CA071B38F554009217FB /* ReviewDetailCell.swift in Sources */,
