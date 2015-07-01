@@ -11,29 +11,71 @@ import Foundation
 
 class OrderDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var itemsFromChef = [ItemVO]()
+    var itemsFromOrder = [ItemVO]()
     var orderId: String?
     
     @IBOutlet var orderDetailList: UITableView!
     
-    @IBAction func cancelOder(sender: AnyObject) {
-    }
     
     override func viewDidLoad() {
         orderDetailList.allowsSelection = false
-        
-        for itemId in shoppingCartVO.itemIds {
-            var item = shoppingCartVO.items[itemId]!
-            if item.restaurantId == chefId {
-                itemsFromChef.append(item)
-            }
+        //println(String(selectedOrder.itemsCount))
+        for (var itemId=0; itemId < selectedOrder.itemsCount; itemId++) {
+            var item: ItemVO = selectedOrder.items[itemId]
+                itemsFromOrder.append(item)
         }
+        //println(String(itemsFromOrder.count))
+        orderDetailList.dataSource = self
+        orderDetailList.delegate = self
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //println(String(itemsFromOrder.count+1))
+        return itemsFromOrder.count + 1
+    }
     
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //println(String(indexPath.row))
+        /*if indexPath.row == 0 {
+            let cell: OrderRestaurantCell = orderDetailList.dequeueReusableCellWithIdentifier("orderInfoCell", forIndexPath: indexPath) as! OrderRestaurantCell
+            cell.restaurantPic.image = UIImage(named: "chefPic.png")
+            cell.restaurantName.text = "Chef Miranda Kerr"
+            cell.status.text = selectedOrder.status as String
+            cell.joinInTime.text = "johnInTime"
+            cell.userName.text = selectedOrder.userId as String
+            cell.userTel.text = "123456789"
+            cell.userAddr.text = "23 Hollywood Ave."
+            cell.joiningFee.text = "$ " + "4.99"
+            cell.HST.text! = "$ " + selectedOrder.tax.stringValue
+            cell.total.text! = "$ " + selectedOrder.total.stringValue
+            println("111")
+            return cell
+        } else {
+            let cell: OrderItemCell = orderDetailList.dequeueReusableCellWithIdentifier("orderItemCell", forIndexPath: indexPath) as! OrderItemCell
+            var item = selectedOrder.items[indexPath.row]
+            cell.itemImage.image = UIImage(named: "chefPic.png")
+            cell.itemName.text = item.name
+            cell.itemPrice.text = item.price.stringValue
+            cell.itemQuantity.text = String(item.quantity)
+            println("222")
+            return cell
+        }*/
+        let cell: OrderRestaurantCell = orderDetailList.dequeueReusableCellWithIdentifier("orderInfoCell", forIndexPath: indexPath) as! OrderRestaurantCell
+        return cell
+    }
     
+    @IBAction func getBack(sender: AnyObject) {
+        performSegueWithIdentifier("getBack", sender: self)
+    }
     
+
     
+    @IBAction func deleteOrder(sender: AnyObject) {
+        println("order Deleted")
+        selectedOrder.isDelete = true
+        
+    }
     
     
     

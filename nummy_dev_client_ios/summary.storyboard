@@ -125,18 +125,18 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="orderSeperator.png" translatesAutoresizingMaskIntoConstraints="NO" id="H5E-CT-buf">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderSeperator.png" translatesAutoresizingMaskIntoConstraints="NO" id="H5E-CT-buf">
                                                     <rect key="frame" x="0.0" y="110" width="350" height="4"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="350" id="7EN-Dl-SsT"/>
+                                                        <constraint firstAttribute="height" constant="4" id="aQH-Eo-Xlt"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Oq-raQ">
                                                     <rect key="frame" x="312" y="60" width="30" height="30"/>
                                                     <state key="normal" image="forward_filled_52px.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="showOrderDetails:" destination="WGm-NC-U5g" eventType="touchUpInside" id="UQM-kz-ktH"/>
-                                                        <segue destination="kx0-r6-iTb" kind="show" id="IQX-Uh-JkR"/>
-                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orderSeperator.png" translatesAutoresizingMaskIntoConstraints="NO" id="e7N-pf-ZKO">
                                                     <rect key="frame" x="0.0" y="146" width="350" height="4"/>
@@ -149,9 +149,11 @@
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="H5E-CT-buf" firstAttribute="top" secondItem="Ir3-pw-cjy" secondAttribute="bottom" constant="8" id="CqO-Vc-IMr"/>
                                             <constraint firstItem="cIh-7G-I0e" firstAttribute="leading" secondItem="0ns-va-btX" secondAttribute="leadingMargin" id="PKZ-bD-kSc"/>
+                                            <constraint firstItem="H5E-CT-buf" firstAttribute="leading" secondItem="0ns-va-btX" secondAttribute="leadingMargin" constant="-8" id="ZfT-ox-GWp"/>
                                             <constraint firstItem="Ir3-pw-cjy" firstAttribute="top" secondItem="cIh-7G-I0e" secondAttribute="bottom" constant="7" id="cIQ-aT-0jW"/>
-                                            <constraint firstItem="H5E-CT-buf" firstAttribute="top" secondItem="Ir3-pw-cjy" secondAttribute="bottom" constant="8" id="dKP-pW-zyU"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="H5E-CT-buf" secondAttribute="trailing" constant="-8" id="iLg-QR-l6T"/>
                                             <constraint firstItem="cIh-7G-I0e" firstAttribute="top" secondItem="0ns-va-btX" secondAttribute="topMargin" id="zBM-7M-kjH"/>
                                             <constraint firstItem="Ir3-pw-cjy" firstAttribute="leading" secondItem="0ns-va-btX" secondAttribute="leadingMargin" id="zsu-CD-v9u"/>
                                         </constraints>
@@ -163,6 +165,7 @@
                                             <outlet property="pickupTime" destination="aAw-qX-HqB" id="SBf-on-X5h"/>
                                             <outlet property="status" destination="2Co-Cb-gvb" id="FY3-aY-h2t"/>
                                             <outlet property="total" destination="oYj-jV-cuQ" id="Kue-Dq-d8o"/>
+                                            <segue destination="kx0-r6-iTb" kind="show" identifier="showOrderDetails" id="Kq2-Et-cC1"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -211,7 +214,8 @@
                                         <barButtonItem key="leftBarButtonItem" image="back_arrow.png" id="ulX-SD-7sb">
                                             <color key="tintColor" red="0.96862745100000003" green="0.65490196079999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="WGm-NC-U5g" kind="show" id="guN-zm-y5H"/>
+                                                <action selector="getBack:" destination="kx0-r6-iTb" id="PgN-OG-dRB"/>
+                                                <segue destination="WGm-NC-U5g" kind="show" identifier="getBack" id="guN-zm-y5H"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -413,7 +417,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelOder:" destination="kx0-r6-iTb" eventType="touchUpInside" id="Luu-DF-tlJ"/>
+                                    <action selector="deleteOrder:" destination="kx0-r6-iTb" eventType="touchUpInside" id="RPh-XF-d9c"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*Order can only be cancelled 24 hrs prior to the reservation time." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUE-0p-xrk">

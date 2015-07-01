@@ -13,6 +13,7 @@ import UIKit
 var shoppingCartVO = ShoppingCartVO()
 var selectedChef: ChefVO!
 var selectChefItems: [ItemVO] = [ItemVO]()
+var selectedOrder: OrderVO!
 //struct GlobalVariables{
 //    static var selectedChef: ChefVO! = ChefVO(dictionary: NSDictionary())
 //}

@@ -55,6 +55,7 @@ class SummaryViewController : UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        //println("321")
         let cell: OrderCell = collectionView.dequeueReusableCellWithReuseIdentifier("orderCell", forIndexPath: indexPath) as! OrderCell
         
         var orderVO = ordersList[indexPath.row]
@@ -70,6 +71,7 @@ class SummaryViewController : UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //println("321")
         return numOfCell
     }
     
@@ -85,7 +87,12 @@ class SummaryViewController : UIViewController, UICollectionViewDelegate, UIColl
         
     }
     
-    @IBAction func showOrderDetails(sender: AnyObject) {
-        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showOrderDetails" {
+            var senderCell = sender as! OrderCell
+            var indexPath: NSIndexPath = self.orderList.indexPathForCell(senderCell)!
+            selectedOrder = ordersList[indexPath.row]
+            //println(selectedOrder.id as String)
+        }
     }
 }
