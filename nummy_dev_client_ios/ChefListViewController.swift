@@ -10,15 +10,6 @@ import UIKit
 import MapKit
 import CoreLocation
 
-// base url for API calls
-let baseUrl = "http://dry-mountain-2007.herokuapp.com"
-let userCoordinateLatitude = "userCoordinateLatitude"
-let userCoordinateLongitude = "userCoordinateLongitude"
-let lastStoryBoard = "lastStoryBoard"
-let lastViewController = "lastViewController"
-
-var testVC:UIViewController?
-
 class ChefListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate, ENSideMenuDelegate{
     // record the number of cells in collection view(not including
     var numOfCell = 0

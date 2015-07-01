@@ -23,17 +23,45 @@ struct ItemVO {
     init(dictionary : NSDictionary) {
         self.id = dictionary.valueForKey("_id") as! String
         self.name = dictionary.valueForKey("name") as! String
-        self.restaurantId = dictionary.valueForKey("restaurantId") as! String
+        
+        if (dictionary.valueForKey("restaurantId") != nil) {
+            self.restaurantId = dictionary.valueForKey("restaurantId") as! String
+        }
+        
         self.price = dictionary.valueForKey("price") as! NSNumber
-        self.description = dictionary.valueForKey("description") as! String
-        self.popularity = dictionary.valueForKey("popularity") as! NSNumber
-        self.description = dictionary.valueForKey("description") as! String
-        self.isDelete = dictionary.valueForKey("isDelete") as! Bool
-        self.isHot = dictionary.valueForKey("isHot") as! Bool
+        
+        if (dictionary.valueForKey("description") != nil) {
+            self.description = dictionary.valueForKey("description") as! String
+        }
+        
+        if (dictionary.valueForKey("popularity") != nil) {
+            self.popularity = dictionary.valueForKey("popularity") as! NSNumber
+        }
+        
+        if (dictionary.valueForKey("description") != nil) {
+            self.description = dictionary.valueForKey("description") as! String
+        }
+        
+        if (dictionary.valueForKey("isDelete") != nil) {
+            self.isDelete = dictionary.valueForKey("isDelete") as! Bool
+        }
+
+        if (dictionary.valueForKey("isHot") != nil) {
+            self.isHot = dictionary.valueForKey("isHot") as! Bool
+        }
+        
+        if (dictionary.valueForKey("qty") != nil) {
+            self.quantity = dictionary.valueForKey("qty")!.integerValue as Int
+        }
         
         // get item image
         let url = NSURL(string: (baseUrl as String) + "/api/images/" + (dictionary.valueForKey("image") as! String))
-        let data = NSData(contentsOfURL: url!)
-        image = UIImage(data: data!)!
+        //let data = NSData(contentsOfURL: url!)
+        //image = UIImage(data: data!)!
+        image = UIImage(named: "chefPic.png")!
+    }
+    
+    func getName()->String {
+        return self.name
     }
 }

@@ -13,9 +13,16 @@ import UIKit
 var shoppingCartVO = ShoppingCartVO()
 var selectedChef: ChefVO!
 var selectChefItems: [ItemVO] = [ItemVO]()
+var selectedOrder: OrderVO!
 //struct GlobalVariables{
 //    static var selectedChef: ChefVO! = ChefVO(dictionary: NSDictionary())
 //}
+
+let baseUrl = "http://dry-mountain-2007.herokuapp.com"
+let userCoordinateLatitude = "userCoordinateLatitude"
+let userCoordinateLongitude = "userCoordinateLongitude"
+let lastStoryBoard = "lastStoryBoard"
+let lastViewController = "lastViewController"
 
 extension Double {
     func format(f: String) -> String {
