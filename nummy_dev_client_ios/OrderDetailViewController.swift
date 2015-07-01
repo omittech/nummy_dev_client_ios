@@ -30,14 +30,14 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //println(String(itemsFromOrder.count+1))
+        println(String(itemsFromOrder.count+1))
         return itemsFromOrder.count + 1
     }
     
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //println(String(indexPath.row))
-        /*if indexPath.row == 0 {
+        if indexPath.row == 0 {
             let cell: OrderRestaurantCell = orderDetailList.dequeueReusableCellWithIdentifier("orderInfoCell", forIndexPath: indexPath) as! OrderRestaurantCell
             cell.restaurantPic.image = UIImage(named: "chefPic.png")
             cell.restaurantName.text = "Chef Miranda Kerr"
@@ -60,9 +60,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             cell.itemQuantity.text = String(item.quantity)
             println("222")
             return cell
-        }*/
-        let cell: OrderRestaurantCell = orderDetailList.dequeueReusableCellWithIdentifier("orderInfoCell", forIndexPath: indexPath) as! OrderRestaurantCell
-        return cell
+        }
     }
     
     @IBAction func getBack(sender: AnyObject) {
