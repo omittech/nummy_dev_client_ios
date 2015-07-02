@@ -6,6 +6,25 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="L3G-Iu-G5o">
+            <objects>
+                <viewController storyboardIdentifier="testVC" id="y4I-AK-RX6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vfz-7z-R9c"/>
+                        <viewControllerLayoutGuide type="bottom" id="TuC-Er-ZVZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a86-5J-Sie">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shJ-uD-EaB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112.5" y="837.5"/>
+        </scene>
         <!--Chef List View Controller-->
         <scene sceneID="AFc-oN-KZJ">
             <objects>
@@ -726,6 +745,6 @@
         <image name="whiteBackground.png" width="266" height="276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wvy-iH-QT2"/>
+        <segue reference="M4n-ua-bFv"/>
     </inferredMetricsTieBreakers>
 </document>
