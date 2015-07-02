@@ -52,14 +52,22 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             println("111")
             return cell
         } else {
-            let cell: OrderItemCell = orderDetailList.dequeueReusableCellWithIdentifier("orderItemCell", forIndexPath: indexPath) as! OrderItemCell
-            var item = selectedOrder.items[indexPath.row]
+            let cell: OrderItemCell = orderDetailList.dequeueReusableCellWithIdentifier("ItemInfoCell", forIndexPath: indexPath) as! OrderItemCell
+            var item = selectedOrder.items[indexPath.row-1]
             cell.itemImage.image = UIImage(named: "chefPic.png")
             cell.itemName.text = item.name
             cell.itemPrice.text = item.price.stringValue
             cell.itemQuantity.text = String(item.quantity)
             println("222")
             return cell
+        }
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 325
+        } else {
+            return 75
         }
     }
     
