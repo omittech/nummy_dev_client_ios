@@ -140,7 +140,7 @@ class ChefDetailViewController: UIViewController, UICollectionViewDataSource, UI
     
     // Define cell sizes
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-            return CGSizeMake(collectionView.bounds.width*0.485, collectionView.bounds.height*0.4924)
+            return CGSizeMake(collectionView.bounds.width*0.475, collectionView.bounds.width*0.475*1.2768)
         
     }
     

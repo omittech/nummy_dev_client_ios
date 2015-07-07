@@ -36,7 +36,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
     
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //println(String(indexPath.row))
+//        println(String(indexPath.row))
         if indexPath.row == 0 {
             let cell: OrderRestaurantCell = orderDetailList.dequeueReusableCellWithIdentifier("orderInfoCell", forIndexPath: indexPath) as! OrderRestaurantCell
             cell.restaurantPic.image = UIImage(named: "chefPic.png")
@@ -52,7 +52,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             println("111")
             return cell
         } else {
-            let cell: OrderItemCell = orderDetailList.dequeueReusableCellWithIdentifier("orderItemCell", forIndexPath: indexPath) as! OrderItemCell
+            let cell: OrderItemCell = orderDetailList.dequeueReusableCellWithIdentifier("itemInfoCell", forIndexPath: indexPath) as! OrderItemCell
             var item = selectedOrder.items[indexPath.row]
             cell.itemImage.image = UIImage(named: "chefPic.png")
             cell.itemName.text = item.name

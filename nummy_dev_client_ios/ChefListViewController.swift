@@ -103,9 +103,10 @@ class ChefListViewController: UIViewController, UICollectionViewDelegate, UIColl
     // Define cell sizes
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         var numOfCellsInPage = 7
-        var cellHeight = collectionView.bounds.size.height / CGFloat(numOfCellsInPage)
+//        var cellHeight = collectionView.bounds.size.height / CGFloat(numOfCellsInPage)
+//        var cellHeight = 66.0
         var cellWidth = collectionView.bounds.size.width - 10
-        return CGSizeMake(cellWidth, cellHeight)
+        return CGSizeMake(cellWidth, 73)
         
         
     }
