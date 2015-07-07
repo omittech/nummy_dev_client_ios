@@ -173,22 +173,22 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         postsUrlRequest.HTTPBody = jsonPost
         
         var data: NSData!
-//        data = NSURLConnection.sendSynchronousRequest(postsUrlRequest, returningResponse: nil, error: &postJSONError)
-//        var jsonError: NSError?
-//        let post = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as! NSDictionary
-//        /*let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError)
-//        if let unwrappedError = jsonError {
-//            println("json error: \(unwrappedError)")
-//        } else {
-//            //println("The post is:" + post.description)
-//        }*/
-//        var status: NSString! = post.valueForKey("status") as! NSString
-//        if (status == "fail") {
-//            
-//            println("login failed")
-//            return false
-//        }
-//        println("login success")
+        data = NSURLConnection.sendSynchronousRequest(postsUrlRequest, returningResponse: nil, error: &postJSONError)
+        var jsonError: NSError?
+        let post = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as! NSDictionary
+        /*let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError)
+        if let unwrappedError = jsonError {
+            println("json error: \(unwrappedError)")
+        } else {
+            //println("The post is:" + post.description)
+        }*/
+        var status: NSString! = post.valueForKey("status") as! NSString
+        if (status == "fail") {
+            
+            println("login failed")
+            return false
+        }
+        println("login success")
         return true
     }
     
