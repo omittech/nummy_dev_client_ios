@@ -63,6 +63,14 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 325
+        } else {
+            return 75
+        }
+    }
+    
     @IBAction func getBack(sender: AnyObject) {
         performSegueWithIdentifier("getBack", sender: self)
     }
