@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        var storyboard = UIStoryboard(name: "summary", bundle: nil)
-        var controller = storyboard.instantiateViewControllerWithIdentifier("summaryPage") as! UIViewController
+        var storyboard = UIStoryboard(name: "login", bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier("loginPage") as! UIViewController
         
         self.presentViewController(controller, animated: true, completion: nil)
     }

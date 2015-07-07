@@ -25,6 +25,8 @@ let userCoordinateLongitude = "userCoordinateLongitude"
 let lastStoryBoard = "lastStoryBoard"
 let lastViewController = "lastViewController"
 
+var testVC:UIViewController?
+
 extension Double {
     func format(f: String) -> String {
         return NSString(format: "%\(f)f", self) as String
