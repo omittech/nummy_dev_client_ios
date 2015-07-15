@@ -57,7 +57,8 @@ struct ItemVO {
         // get item image
         let url = NSURL(string: (baseUrl as String) + "/api/images/" + (dictionary.valueForKey("image") as! String))
         let data = NSData(contentsOfURL: url!)
-        image = UIImage(data: data!)!
+        //image = UIImage(data: data!)!
+        image = UIImage(named: "chefPic.png")!
     }
     
     func getName()->String {

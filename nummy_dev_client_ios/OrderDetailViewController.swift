@@ -53,7 +53,7 @@ class OrderDetailViewController: UIViewController, UITableViewDataSource, UITabl
             return cell
         } else {
             let cell: OrderItemCell = orderDetailList.dequeueReusableCellWithIdentifier("itemInfoCell", forIndexPath: indexPath) as! OrderItemCell
-            var item = selectedOrder.items[indexPath.row]
+            var item = selectedOrder.items[indexPath.row-1]
             cell.itemImage.image = UIImage(named: "chefPic.png")
             cell.itemName.text = item.name
             cell.itemPrice.text = item.price.stringValue

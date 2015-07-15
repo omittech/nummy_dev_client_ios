@@ -8,6 +8,7 @@
 
 import UIKit
 import JavaScriptCore
+import Security
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDelegate {
     
@@ -17,6 +18,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     
     @IBOutlet var username_field: UITextField!
 
+    @IBOutlet var or: UILabel!
+    
     @IBOutlet var spinner: UIActivityIndicatorView!
     // Facebook Delegate Methods
     
@@ -136,7 +139,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
             self.view.addSubview(loginView)
             loginView.center = self.view.center
-            loginView.frame.origin.y = 550
+            loginView.frame.origin.y = or.frame.origin.y + CGFloat(35)
             loginView.alpha = 0.8
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
@@ -171,12 +174,13 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         var decrypted = decryptFunction.callWithArguments([encrypted, "thisisakey"])
         println(decrypted)
         
+
         // MARK: POST
         // Create new post
         var postsEndpoint: String = baseUrl + "/api/login"
         var postsUrlRequest = NSMutableURLRequest(URL: NSURL(string: postsEndpoint)!)
         postsUrlRequest.HTTPMethod = "POST"
-        var newPost: NSDictionary = ["username": username, "password": encryptedString];
+        var newPost: NSDictionary = ["username": username, "password": password];
         var postJSONError: NSError?
         var jsonPost = NSJSONSerialization.dataWithJSONObject(newPost, options: nil, error:  &postJSONError)
         postsUrlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -187,17 +191,23 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         var jsonError: NSError?
         let post = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as! NSDictionary
         
-        if (user.getStatus() != "blank") {
+        if (user != nil) {
             
             var newUser = UserVO(dictionary: post)
             user.setUser(newUser)
         
         }
-        user = UserVO(dictionary: post)
+        else {
+            
+            user = UserVO(dictionary: post)
+        
+        }
+
         if (user.getStatus() == "fail") {
             
             println(user.getMessage())
             return false
+            
         }
         println(user.getMessage())
         return true

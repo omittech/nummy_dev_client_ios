@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct UserVO {
-    var status: String = "blank"
+    var status: String = ""
     var message: String = ""
     var id: String = ""
     var username: String = ""
@@ -35,7 +35,7 @@ struct UserVO {
     }
     
     mutating func resetUser() {
-        self.status = "blank"
+        self.status = ""
         self.message = ""
         self.id = ""
         self.username = ""
