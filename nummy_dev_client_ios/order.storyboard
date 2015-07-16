@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Thank You View Controller-->
+        <!--Success Page View Controller-->
         <scene sceneID="nh0-9b-pKX">
             <objects>
-                <viewController id="K7w-ye-Vdg" customClass="ThankYouViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="K7w-ye-Vdg" customClass="SuccessPageViewController" customModule="nummy_dev_client_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RKJ-Rk-wWi"/>
                         <viewControllerLayoutGuide type="bottom" id="pXp-Qb-5Zh"/>
@@ -62,7 +62,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToHome:" destination="K7w-ye-Vdg" eventType="touchUpInside" id="gtA-d5-DmL"/>
+                                    <action selector="goToHome:" destination="K7w-ye-Vdg" eventType="touchUpInside" id="XxV-m9-i1o"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Order can only be cancelled 24 hrs prior to the reservation time." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36b-K0-fr5">

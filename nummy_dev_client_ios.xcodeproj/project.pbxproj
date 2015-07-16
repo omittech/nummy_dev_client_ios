@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E09B2711B574A8900384690 /* SuccessPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09B2701B574A8900384690 /* SuccessPageViewController.swift */; };
 		5E373FD11B2FB51F00F5F9B7 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FCF1B2FB51F00F5F9B7 /* ENSideMenu.swift */; };
 		5E373FD21B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD01B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift */; };
 		5E373FD41B2FC1C800F5F9B7 /* ChefListNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */; };
@@ -103,7 +104,6 @@
 		CA5AEBF71B20A80B00F3CC21 /* order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBF61B20A80B00F3CC21 /* order.storyboard */; };
 		CA5AEBF91B20A89100F3CC21 /* orderReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5AEBF81B20A89100F3CC21 /* orderReviewViewController.swift */; };
 		CA5AEBFB1B20A8EB00F3CC21 /* orderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5AEBFA1B20A8EB00F3CC21 /* orderSummaryViewController.swift */; };
-		CA5AEBFD1B20A98E00F3CC21 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5AEBFC1B20A98E00F3CC21 /* ThankYouViewController.swift */; };
 		CA5AEC001B20AB7100F3CC21 /* 23.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBFF1B20AB7100F3CC21 /* 23.png */; };
 		CA5AEC021B20B08E00F3CC21 /* 24.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEC011B20B08E00F3CC21 /* 24.png */; };
 		CA5AEC041B20B10E00F3CC21 /* 31.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEC031B20B10E00F3CC21 /* 31.png */; };
@@ -131,6 +131,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E09B2701B574A8900384690 /* SuccessPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessPageViewController.swift; sourceTree = "<group>"; };
 		5E373FCF1B2FB51F00F5F9B7 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		5E373FD01B2FB51F00F5F9B7 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		5E373FD31B2FC1C800F5F9B7 /* ChefListNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefListNavigationView.swift; sourceTree = "<group>"; };
@@ -231,7 +232,6 @@
 		CA5AEBF61B20A80B00F3CC21 /* order.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = order.storyboard; sourceTree = "<group>"; };
 		CA5AEBF81B20A89100F3CC21 /* orderReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderReviewViewController.swift; sourceTree = "<group>"; };
 		CA5AEBFA1B20A8EB00F3CC21 /* orderSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderSummaryViewController.swift; sourceTree = "<group>"; };
-		CA5AEBFC1B20A98E00F3CC21 /* ThankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		CA5AEBFF1B20AB7100F3CC21 /* 23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 23.png; sourceTree = "<group>"; };
 		CA5AEC011B20B08E00F3CC21 /* 24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 24.png; sourceTree = "<group>"; };
 		CA5AEC031B20B10E00F3CC21 /* 31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 31.png; sourceTree = "<group>"; };
@@ -299,7 +299,7 @@
 				5E9DFEF41B326D4600B474F2 /* CartItemCell.swift */,
 				5E9DFEF81B3274AD00B474F2 /* CartPriceCell.swift */,
 				5E45CA061B38F554009217FB /* ReviewDetailCell.swift */,
-				CA5AEBFC1B20A98E00F3CC21 /* ThankYouViewController.swift */,
+				5E09B2701B574A8900384690 /* SuccessPageViewController.swift */,
 			);
 			name = ShoppingCart;
 			sourceTree = "<group>";
@@ -746,7 +746,6 @@
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,
 				CA60DEF11B3A4158000EA8B3 /* OrderVO.swift in Sources */,
 				CAD2D8001B02CFB9006BA377 /* SignUpViewController.swift in Sources */,
-				CA5AEBFD1B20A98E00F3CC21 /* ThankYouViewController.swift in Sources */,
 				5E373FD41B2FC1C800F5F9B7 /* ChefListNavigationView.swift in Sources */,
 				5ED205941AE5D03C00CF2426 /* LoginViewController.swift in Sources */,
 				CA60DEF51B3B9183000EA8B3 /* UserVO.swift in Sources */,
@@ -756,6 +755,7 @@
 				CA5AEBFB1B20A8EB00F3CC21 /* orderSummaryViewController.swift in Sources */,
 				5E373FD11B2FB51F00F5F9B7 /* ENSideMenu.swift in Sources */,
 				5E9DFEF11B32549600B474F2 /* CartRestaurantCell.swift in Sources */,
+				5E09B2711B574A8900384690 /* SuccessPageViewController.swift in Sources */,
 				5E373FD81B2FC4B500F5F9B7 /* MyNavigationTableViewController.swift in Sources */,
 				5E9DFEF91B3274AD00B474F2 /* CartPriceCell.swift in Sources */,
 				CA19F8AE1B407DD90064D35B /* OrderRestaurantCell.swift in Sources */,
