@@ -14,6 +14,7 @@ var shoppingCartVO = ShoppingCartVO()
 var selectedChef: ChefVO!
 var selectChefItems: [ItemVO] = [ItemVO]()
 var selectedOrder: OrderVO!
+var user: UserVO!
 //struct GlobalVariables{
 //    static var selectedChef: ChefVO! = ChefVO(dictionary: NSDictionary())
 //}

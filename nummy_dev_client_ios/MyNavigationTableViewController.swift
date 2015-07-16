@@ -147,6 +147,9 @@ class MyNavigationTableViewController: UITableViewController {
         case 2:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController3")as! UIViewController
             break
+        case 3:
+            let summaryStoryboard: UIStoryboard = UIStoryboard(name: "summary", bundle: nil)
+            destViewController = summaryStoryboard.instantiateViewControllerWithIdentifier("summaryPage") as! UIViewController
         case 4:
             let loginStoryboard: UIStoryboard = UIStoryboard(name: "login",bundle: nil)
             destViewController = loginStoryboard.instantiateViewControllerWithIdentifier("myAccount") as! UIViewController

@@ -75,6 +75,17 @@ class SummaryViewController : UIViewController, UICollectionViewDelegate, UIColl
         return numOfCell
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
+    {
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        return CGSize(width:screenSize.width*0.95,height:150)
+    }
+    
+    /*func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        var edgeInset: UIEdgeInsets = UIEdgeInsetsMake(CGFloat(0), CGFloat(-10), CGFloat(0), CGFloat(-10))
+        return edgeInset
+    }*/
+    
     
     @IBAction func showCart(sender: AnyObject) {
         var storyboard = UIStoryboard(name: "order", bundle: nil)

@@ -10,6 +10,7 @@ import UIKit
 
 class TermAndConditionsViewController: UIViewController {
     
+    @IBOutlet var terms: UITextView!
     @IBAction func backToLogin(sender: AnyObject) {
         
         performSegueWithIdentifier("T&CbackLoginSegue", sender: self)
@@ -25,6 +26,7 @@ class TermAndConditionsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        terms.editable = false
         // Do any additional setup after loading the view, typically from a nib.
     }
     

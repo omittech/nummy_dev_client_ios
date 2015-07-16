@@ -8,6 +8,7 @@
 
 import UIKit
 import JavaScriptCore
+import Security
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDelegate {
     
@@ -17,6 +18,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     
     @IBOutlet var username_field: UITextField!
 
+    @IBOutlet var or: UILabel!
+    
     @IBOutlet var spinner: UIActivityIndicatorView!
     // Facebook Delegate Methods
     
@@ -69,77 +72,90 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
     }
     
     @IBAction func forgetPassword(sender: AnyObject) {
+        
         performSegueWithIdentifier("forgetPasswordSegue", sender: self)
+        
     }
     
     @IBAction func signUp(sender: AnyObject) {
+        
         performSegueWithIdentifier("signUpSegue", sender: self)
+        
     }
     
     @IBAction func Login(sender: AnyObject) {
+        
         var username = username_field.text
         var password = password_field.text
         
         //check the database to see if the un/pw are correct
         if loginCheck(Username: username, Password: password) {
-            //if login success, then segue to next page
             
+            //if login success, then segue to next page
             spinner.stopAnimating()
             println("spinner end")
             performSegueWithIdentifier("loginSuccessSegue", sender: self)
+            
         }
         else {
-            //if login failed, pop-up a alert
             
+            //if login failed, pop-up a alert
             spinner.stopAnimating()
             println("spinner end")
             
             var alertView = UIAlertView();
             alertView.addButtonWithTitle("OK");
             alertView.title = "Login failed";
-            alertView.message = "Invalid login information";
+            alertView.message = user.getMessage();
             alertView.show();
+            
         }
     }
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.password_field.delegate = self
         self.username_field.delegate = self
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         
         spinner.stopAnimating()
         
-        if (FBSDKAccessToken.currentAccessToken() != nil)
-        {
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            
             // User is already logged in, do work such as go to next view controller.
             println("FB account already login")
             var storyboard = UIStoryboard(name: "chefs", bundle: nil)
             var controller = storyboard.instantiateViewControllerWithIdentifier("chefList") as! UIViewController
             presentViewController(controller, animated: true, completion: nil)
+            
         }
-        else
-        {
+        else {
+            
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
             self.view.addSubview(loginView)
             loginView.center = self.view.center
-            loginView.frame.origin.y = 550
+            loginView.frame.origin.y = or.frame.origin.y + CGFloat(35)
             loginView.alpha = 0.8
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
+            
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
     func loginCheck(Username username: String, Password password: String)->Bool {
+        
         println("spinner start")
         spinner.startAnimating()
         
@@ -148,25 +164,23 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         // Retrieve the content of aes.js
         var error:NSError?
         let cryptoJS = String(contentsOfFile: cryptoJSpath!, encoding:NSUTF8StringEncoding, error: &error)
-
         let cryptoJScontext = JSContext()
         cryptoJScontext.evaluateScript(cryptoJS)
         let encryptFunction = cryptoJScontext.objectForKeyedSubscript("encrypt")
         let decryptFunction = cryptoJScontext.objectForKeyedSubscript("decrypt")
-        
         var encrypted = encryptFunction.callWithArguments([password, "thisisakey"])
         var encryptedString = encrypted.toString()
         println(encryptedString)
         var decrypted = decryptFunction.callWithArguments([encrypted, "thisisakey"])
         println(decrypted)
         
+
         // MARK: POST
         // Create new post
         var postsEndpoint: String = baseUrl + "/api/login"
         var postsUrlRequest = NSMutableURLRequest(URL: NSURL(string: postsEndpoint)!)
         postsUrlRequest.HTTPMethod = "POST"
-        
-        var newPost: NSDictionary = ["username": username, "password": encryptedString];
+        var newPost: NSDictionary = ["username": username, "password": password];
         var postJSONError: NSError?
         var jsonPost = NSJSONSerialization.dataWithJSONObject(newPost, options: nil, error:  &postJSONError)
         postsUrlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -176,31 +190,41 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFie
         data = NSURLConnection.sendSynchronousRequest(postsUrlRequest, returningResponse: nil, error: &postJSONError)
         var jsonError: NSError?
         let post = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as! NSDictionary
-        /*let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError)
-        if let unwrappedError = jsonError {
-            println("json error: \(unwrappedError)")
-        } else {
-            //println("The post is:" + post.description)
-        }*/
-        var status: NSString! = post.valueForKey("status") as! NSString
-        if (status == "fail") {
+        
+        if (user != nil) {
             
-            println("login failed")
-            return false
+            var newUser = UserVO(dictionary: post)
+            user.setUser(newUser)
+        
         }
-        println("login success")
+        else {
+            
+            user = UserVO(dictionary: post)
+        
+        }
+
+        if (user.getStatus() == "fail") {
+            
+            println(user.getMessage())
+            return false
+            
+        }
+        println(user.getMessage())
         return true
+        
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
         self.view.endEditing(true)
+    
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
-        
         return true
+        
     }
 }
 
