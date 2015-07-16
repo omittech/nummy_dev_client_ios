@@ -103,7 +103,7 @@
 		CA5AEBF71B20A80B00F3CC21 /* order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBF61B20A80B00F3CC21 /* order.storyboard */; };
 		CA5AEBF91B20A89100F3CC21 /* orderReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5AEBF81B20A89100F3CC21 /* orderReviewViewController.swift */; };
 		CA5AEBFB1B20A8EB00F3CC21 /* orderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5AEBFA1B20A8EB00F3CC21 /* orderSummaryViewController.swift */; };
-		CA5AEBFD1B20A98E00F3CC21 /* thankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5AEBFC1B20A98E00F3CC21 /* thankYouViewController.swift */; };
+		CA5AEBFD1B20A98E00F3CC21 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5AEBFC1B20A98E00F3CC21 /* ThankYouViewController.swift */; };
 		CA5AEC001B20AB7100F3CC21 /* 23.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEBFF1B20AB7100F3CC21 /* 23.png */; };
 		CA5AEC021B20B08E00F3CC21 /* 24.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEC011B20B08E00F3CC21 /* 24.png */; };
 		CA5AEC041B20B10E00F3CC21 /* 31.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5AEC031B20B10E00F3CC21 /* 31.png */; };
@@ -231,7 +231,7 @@
 		CA5AEBF61B20A80B00F3CC21 /* order.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = order.storyboard; sourceTree = "<group>"; };
 		CA5AEBF81B20A89100F3CC21 /* orderReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderReviewViewController.swift; sourceTree = "<group>"; };
 		CA5AEBFA1B20A8EB00F3CC21 /* orderSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderSummaryViewController.swift; sourceTree = "<group>"; };
-		CA5AEBFC1B20A98E00F3CC21 /* thankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thankYouViewController.swift; sourceTree = "<group>"; };
+		CA5AEBFC1B20A98E00F3CC21 /* ThankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
 		CA5AEBFF1B20AB7100F3CC21 /* 23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 23.png; sourceTree = "<group>"; };
 		CA5AEC011B20B08E00F3CC21 /* 24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 24.png; sourceTree = "<group>"; };
 		CA5AEC031B20B10E00F3CC21 /* 31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 31.png; sourceTree = "<group>"; };
@@ -299,6 +299,7 @@
 				5E9DFEF41B326D4600B474F2 /* CartItemCell.swift */,
 				5E9DFEF81B3274AD00B474F2 /* CartPriceCell.swift */,
 				5E45CA061B38F554009217FB /* ReviewDetailCell.swift */,
+				CA5AEBFC1B20A98E00F3CC21 /* ThankYouViewController.swift */,
 			);
 			name = ShoppingCart;
 			sourceTree = "<group>";
@@ -446,7 +447,6 @@
 				CA5AEBFE1B20A9E900F3CC21 /* images */,
 				CA5AEBF81B20A89100F3CC21 /* orderReviewViewController.swift */,
 				CA5AEBFA1B20A8EB00F3CC21 /* orderSummaryViewController.swift */,
-				CA5AEBFC1B20A98E00F3CC21 /* thankYouViewController.swift */,
 			);
 			name = orderModule;
 			sourceTree = "<group>";
@@ -746,7 +746,7 @@
 				5E4FBF921B268B06001340D3 /* ChefListViewController.swift in Sources */,
 				CA60DEF11B3A4158000EA8B3 /* OrderVO.swift in Sources */,
 				CAD2D8001B02CFB9006BA377 /* SignUpViewController.swift in Sources */,
-				CA5AEBFD1B20A98E00F3CC21 /* thankYouViewController.swift in Sources */,
+				CA5AEBFD1B20A98E00F3CC21 /* ThankYouViewController.swift in Sources */,
 				5E373FD41B2FC1C800F5F9B7 /* ChefListNavigationView.swift in Sources */,
 				5ED205941AE5D03C00CF2426 /* LoginViewController.swift in Sources */,
 				CA60DEF51B3B9183000EA8B3 /* UserVO.swift in Sources */,

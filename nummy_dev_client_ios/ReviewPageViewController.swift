@@ -30,6 +30,35 @@ class ReviewPageViewController : UIViewController, UITableViewDataSource, UITabl
         }
     }
     
+    @IBAction func join(sender: AnyObject) {
+        var postsEndpoint: String = baseUrl + "/api/order"
+        var postsUrlRequest = NSMutableURLRequest(URL: NSURL(string: postsEndpoint)!)
+        postsUrlRequest.HTTPMethod = "POST"
+        
+        var newPost: NSDictionary = ["userId": "553c561084bbed2b06474782", "restaurantId": "553d9872377d103c055f66b1", "subtotal":36.8, "tax":3.4, "total":40.2,
+        "note":"", "items":[]];
+        var postJSONError: NSError?
+        var jsonPost = NSJSONSerialization.dataWithJSONObject(newPost, options: nil, error:  &postJSONError)
+        postsUrlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        postsUrlRequest.HTTPBody = jsonPost
+        
+        var data: NSData!
+        data = NSURLConnection.sendSynchronousRequest(postsUrlRequest, returningResponse: nil, error: &postJSONError)
+        var jsonError: NSError?
+        let post = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError) as! NSDictionary
+        let json: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &jsonError)
+        if let unwrappedError = jsonError {
+            println("json error: \(unwrappedError)")
+        } else {
+            println("The post is:" + post.description)
+        }
+        var status: NSString! = post.valueForKey("status") as! NSString
+        if (status == "fail") {
+            println("login failed")
+        }
+
+    }
+    
     @IBAction func showTimeSelection(sender: AnyObject) {
         var oldFrame = selectionBackground.frame
         oldFrame.size.height = 150
