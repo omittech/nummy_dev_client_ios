@@ -8,6 +8,7 @@
 
 import UIKit
 import JavaScriptCore
+import CoreData
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -60,9 +61,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         if (Password.text == RePassword.text) {
             
-            var pass: String = Password.text
-            
-            //encrypt
+            /*disable the encrypt
             // get the project path of aes.js
             let cryptoJSpath = NSBundle.mainBundle().pathForResource("aes", ofType: "js")
             // Retrieve the content of aes.js
@@ -77,6 +76,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             println(encryptedString)
             var decrypted = decryptFunction.callWithArguments([encrypted, "thisisakey"])
             println(decrypted)
+            */
             
             // MARK: POST
             // Create new post
@@ -84,7 +84,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             var postsUrlRequest = NSMutableURLRequest(URL: NSURL(string: postsEndpoint)!)
             postsUrlRequest.HTTPMethod = "POST"
             
-            var newPost: NSDictionary = ["username": Email.text, "password": encryptedString, "firstname": FirstName.text, "lastname": LastName.text];
+            var newPost: NSDictionary = ["username": Email.text, "password": Password.text, "firstname": FirstName.text, "lastname": LastName.text];
             var postJSONError: NSError?
             var jsonPost = NSJSONSerialization.dataWithJSONObject(newPost, options: nil, error:  &postJSONError)
             postsUrlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -97,11 +97,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
             spinner.stopAnimating()
             
-            if (user.status == "ok") {
+            if (post.valueForKey("status") as! String == "ok") {
                 
-                user.resetUser()
-                user.setStatus(post.valueForKey("status") as! String)
-                user.setUsername(post.valueForKey("data")?.valueForKey("username") as! String)
+                user.updateUser(post)
                 
                 var alertView = UIAlertView();
                 alertView.addButtonWithTitle("OK");
